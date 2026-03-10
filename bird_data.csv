@@ -1,0 +1,565 @@
+bird_name,region_state,wing_length_cm,heartbeat_micro_vibrations,respiration_bpm,healthy_wingbeat_freq_hz,unhealthy_wingbeat_freq_hz,region_encoded
+Unknown_Indian_Species_175,Andhra Pradesh,51.7,4.36,38.0,7.68,2.34,0
+Unknown_Indian_Species_078,Andhra Pradesh,40.6,3.22,25.0,7.37,5.81,0
+Unknown_Indian_Species_002,Andhra Pradesh,29.4,2.09,40.0,7.8,2.1,0
+Black-tailed Godwit (Alt),Andhra Pradesh,29.8,2.66,42.0,10.07,3.82,0
+Lesser Crested Tern,Andhra Pradesh,55.4,3.01,37.0,9.79,3.98,0
+Oriental Magpie Robin,Andhra Pradesh,29.8,3.3,15.0,10.57,5.44,0
+Lesser Flameback,Andhra Pradesh,55.4,3.72,22.0,7.7,5.83,0
+Northern Wheatear,Andhra Pradesh,40.7,1.18,22.0,10.67,2.49,0
+White-throated Fantail,Andhra Pradesh,25.3,2.63,31.0,10.95,4.38,0
+Plaintive Cuckoo,Andhra Pradesh,58.0,4.12,34.0,10.26,5.57,0
+Unknown_Indian_Species_045,Andhra Pradesh,37.1,4.17,29.0,10.59,4.97,0
+Ultramarine Flycatcher,Andhra Pradesh,12.7,3.04,45.0,14.2,3.83,0
+Indian Silverbill,Andhra Pradesh,15.8,3.94,45.0,11.37,3.23,0
+Black Drongo (Alt 2),Andhra Pradesh,31.4,1.95,25.0,10.57,2.32,0
+Unknown_Indian_Species_088,Andhra Pradesh,26.0,2.34,19.0,9.83,2.26,0
+Purple Swamphen,Andhra Pradesh,36.3,2.9,28.0,7.25,5.33,0
+Indian Paradise Flycatcher (Female),Andhra Pradesh,11.9,5.08,74.0,10.1,5.64,0
+Collared Falconet,Andhra Pradesh,43.0,2.67,45.0,8.41,5.01,0
+Grey-headed Rail,Andhra Pradesh,54.1,4.34,28.0,9.15,4.94,0
+Unknown_Indian_Species_140,Andhra Pradesh,52.0,4.14,30.0,7.88,3.74,0
+Unknown_Indian_Species_122,Arunachal Pradesh,21.2,2.18,36.0,10.19,4.9,1
+White-crested Laughingthrush,Arunachal Pradesh,53.6,4.22,34.0,9.14,5.63,1
+Unknown_Indian_Species_090,Arunachal Pradesh,43.7,3.32,17.0,9.57,2.54,1
+Unknown_Indian_Species_155,Arunachal Pradesh,38.5,1.18,27.0,8.31,3.82,1
+Sooty Falcon,Arunachal Pradesh,33.5,4.08,23.0,10.01,5.33,1
+Unknown_Indian_Species_034,Arunachal Pradesh,30.1,1.29,15.0,10.0,2.21,1
+Yellow-bellied Prinia (Alt),Arunachal Pradesh,17.5,2.9,34.0,13.91,4.96,1
+Black-winged Stilt (Alt),Arunachal Pradesh,50.2,4.32,21.0,10.36,4.49,1
+Unknown_Indian_Species_064,Arunachal Pradesh,29.5,2.66,18.0,9.26,2.87,1
+Unknown_Indian_Species_043,Arunachal Pradesh,48.0,3.68,20.0,9.42,5.85,1
+Blue Rock Thrush,Arunachal Pradesh,48.7,3.72,20.0,10.86,2.43,1
+Indian Swiftlet (Alt),Arunachal Pradesh,8.3,3.25,73.0,14.54,4.13,1
+Demoiselle Crane,Arunachal Pradesh,116.5,0.9,26.0,5.76,2.88,1
+Common Kingfisher,Arunachal Pradesh,24.1,3.7,42.0,9.74,5.22,1
+Ruddy Shelduck,Arunachal Pradesh,51.8,2.98,16.0,8.39,3.71,1
+Paddyfield Pipit,Arunachal Pradesh,11.7,4.02,51.0,10.06,4.26,1
+Unknown_Indian_Species_130,Arunachal Pradesh,39.6,2.52,26.0,9.54,5.31,1
+Crested Treeswift,Arunachal Pradesh,15.1,3.74,76.0,12.61,4.95,1
+Unknown_Indian_Species_198,Arunachal Pradesh,44.6,4.22,39.0,8.93,3.74,1
+Marsh Sandpiper,Arunachal Pradesh,49.2,1.94,42.0,7.98,5.74,1
+Chestnut-backed Bush Warbler,Assam,10.8,3.8,78.0,12.32,4.83,2
+Unknown_Indian_Species_038,Assam,35.2,1.1,42.0,8.3,3.95,2
+Brown-cheeked Fulvetta,Assam,34.2,1.9,23.0,10.52,4.8,2
+Pheasant-tailed Jacana,Assam,76.6,0.52,14.0,3.34,3.16,2
+Red-necked Phalarope,Assam,39.5,3.65,37.0,8.9,4.85,2
+White-tailed Drongo,Assam,37.9,1.06,24.0,7.89,4.77,2
+Bar-tailed Godwit,Assam,32.2,3.04,30.0,9.21,3.38,2
+Unknown_Indian_Species_041,Assam,59.9,2.93,26.0,9.81,3.08,2
+Unknown_Indian_Species_147,Assam,30.1,1.42,21.0,8.26,4.97,2
+Unknown_Indian_Species_089,Assam,58.0,3.42,21.0,7.87,3.94,2
+Unknown_Indian_Species_010,Assam,49.0,4.42,31.0,9.39,5.92,2
+Unknown_Indian_Species_067,Assam,53.3,2.04,26.0,7.72,2.06,2
+Unknown_Indian_Species_030,Assam,41.4,1.96,16.0,9.21,4.79,2
+Grey Francolin (Alt),Assam,25.1,4.04,30.0,7.41,2.05,2
+Unknown_Indian_Species_111,Assam,31.4,2.68,25.0,7.74,2.21,2
+Indian Vulture,Assam,116.5,1.46,10.0,4.6,1.22,2
+Unknown_Indian_Species_176,Assam,45.2,1.19,19.0,10.24,5.8,2
+Indian Cuckoo (Alt),Assam,23.4,1.87,32.0,10.06,4.43,2
+Unknown_Indian_Species_177,Assam,51.6,1.79,31.0,8.52,5.63,2
+Unknown_Indian_Species_116,Assam,31.9,3.06,28.0,8.22,4.48,2
+Unknown_Indian_Species_065,Bihar,44.4,3.59,45.0,10.05,4.5,3
+Green Bee-eater,Bihar,30.6,1.28,22.0,7.7,2.3,3
+Ashy Prinia,Bihar,8.0,3.8,68.0,12.35,3.1,3
+Common Tailorbird,Bihar,31.5,1.99,42.0,8.82,4.75,3
+Paddyfield Warbler,Bihar,17.2,5.15,70.0,12.95,5.41,3
+Unknown_Indian_Species_077,Bihar,27.9,1.4,22.0,9.59,5.63,3
+Eurasian Sparrowhawk,Bihar,16.3,2.29,40.0,13.96,4.79,3
+Laggar Falcon,Bihar,53.0,4.22,29.0,7.5,4.75,3
+Spotted Dove,Bihar,48.0,4.3,31.0,9.16,3.75,3
+Asian Palm Swift (Alt),Bihar,14.0,5.56,77.0,11.61,3.75,3
+Yellow-footed Green Pigeon,Bihar,23.7,4.37,41.0,10.44,4.35,3
+Unknown_Indian_Species_018,Bihar,20.8,3.68,41.0,8.08,2.16,3
+Indian Scops Owl,Bihar,50.3,2.65,35.0,8.77,3.11,3
+Pied Kingfisher,Bihar,59.9,2.53,41.0,8.97,2.36,3
+River Lapwing (Alt 2),Bihar,33.9,2.17,36.0,7.42,2.64,3
+Unknown_Indian_Species_092,Bihar,36.5,2.73,36.0,10.78,5.25,3
+Unknown_Indian_Species_146,Bihar,42.0,2.59,25.0,8.01,2.46,3
+Unknown_Indian_Species_181,Bihar,50.9,4.03,41.0,10.95,4.63,3
+Rosy Starling,Bihar,41.7,2.45,21.0,9.07,4.49,3
+Red Junglefowl (Alt),Bihar,39.9,2.55,16.0,7.81,4.2,3
+Black-headed Munia,Chhattisgarh,17.3,3.75,74.0,12.42,3.09,4
+Unknown_Indian_Species_095,Chhattisgarh,45.2,3.8,37.0,7.63,4.2,4
+Unknown_Indian_Species_162,Chhattisgarh,42.1,1.33,41.0,10.65,3.85,4
+Unknown_Indian_Species_048,Chhattisgarh,24.7,3.91,30.0,10.73,3.17,4
+Unknown_Indian_Species_138,Chhattisgarh,48.2,2.45,30.0,10.92,2.97,4
+Grey-breasted Prinia,Chhattisgarh,13.5,3.53,68.0,12.54,5.64,4
+Unknown_Indian_Species_180,Chhattisgarh,54.6,1.97,40.0,10.42,3.36,4
+Common Myna,Chhattisgarh,51.5,1.94,15.0,8.13,3.19,4
+Greater Crested Tern,Chhattisgarh,43.5,4.5,30.0,10.46,3.79,4
+Unknown_Indian_Species_125,Chhattisgarh,39.4,2.16,39.0,9.17,3.82,4
+Barn Swallow,Chhattisgarh,11.2,2.75,74.0,11.19,4.15,4
+Fulvous-breasted Woodpecker,Chhattisgarh,54.2,2.44,25.0,9.98,4.82,4
+Unknown_Indian_Species_132,Chhattisgarh,52.5,2.35,36.0,10.17,4.61,4
+Unknown_Indian_Species_057,Chhattisgarh,26.1,4.38,19.0,9.01,4.36,4
+Unknown_Indian_Species_004,Chhattisgarh,54.8,4.06,29.0,7.4,5.64,4
+White-browed Wagtail,Chhattisgarh,20.6,1.5,42.0,9.62,2.62,4
+Lesser Noddy,Chhattisgarh,38.8,4.39,25.0,9.49,3.59,4
+Eurasian Curlew,Chhattisgarh,23.2,2.15,36.0,10.44,3.52,4
+Lesser Cuckoo,Chhattisgarh,32.7,3.52,39.0,8.95,4.16,4
+Unknown_Indian_Species_169,Chhattisgarh,44.7,1.82,36.0,10.68,5.99,4
+Unknown_Indian_Species_024,Goa,49.9,2.52,18.0,10.04,4.82,5
+Unknown_Indian_Species_005,Goa,24.0,1.58,24.0,10.61,2.18,5
+Garganey,Goa,51.8,2.03,26.0,8.72,2.98,5
+Pied Wheatear,Goa,36.5,3.39,20.0,7.68,2.32,5
+Indian Pitta,Goa,54.8,3.17,22.0,8.99,4.33,5
+Allen's Gallinule,Goa,29.3,3.23,29.0,8.02,2.04,5
+Unknown_Indian_Species_186,Goa,52.2,4.15,36.0,9.19,2.3,5
+Unknown_Indian_Species_063,Goa,57.8,4.46,24.0,9.56,3.7,5
+Unknown_Indian_Species_187,Goa,30.0,3.96,21.0,11.0,5.41,5
+Unknown_Indian_Species_031,Goa,24.3,2.33,26.0,9.3,5.97,5
+Greenish Warbler,Goa,11.0,5.91,72.0,11.98,3.02,5
+Abyssinian Hornbill,Goa,111.9,2.06,9.0,6.64,3.24,5
+Grey Wagtail,Goa,53.3,4.16,39.0,10.2,4.43,5
+Unknown_Indian_Species_166,Goa,34.1,3.23,34.0,8.0,5.02,5
+Olive-backed Pipit,Goa,15.7,4.72,38.0,13.14,5.71,5
+Unknown_Indian_Species_039,Goa,45.9,2.08,29.0,7.13,3.46,5
+Thick-billed Flowerpecker,Goa,25.3,4.18,25.0,9.99,2.7,5
+Rufous Sibia,Goa,25.3,2.89,26.0,9.12,5.65,5
+Ferruginous Duck,Goa,53.2,1.9,41.0,10.78,5.87,5
+Cinereous Vulture,Goa,77.7,2.24,11.0,4.87,1.23,5
+Indian Peafowl (Green),Gujarat,105.2,0.95,29.0,5.9,3.94,6
+Jungle Babbler,Gujarat,58.7,3.82,26.0,7.36,3.58,6
+Unknown_Indian_Species_104,Gujarat,30.6,1.43,26.0,9.69,4.69,6
+Blyth's Pipit,Gujarat,13.8,5.29,53.0,10.54,3.7,6
+Unknown_Indian_Species_091,Gujarat,21.0,4.09,32.0,8.31,4.44,6
+Unknown_Indian_Species_148,Gujarat,45.9,3.22,29.0,10.64,3.21,6
+Collared Scops Owl,Gujarat,36.3,1.49,45.0,7.15,5.98,6
+Unknown_Indian_Species_173,Gujarat,24.6,1.82,32.0,7.54,3.81,6
+Unknown_Indian_Species_084,Gujarat,46.8,3.6,45.0,9.16,4.35,6
+Unknown_Indian_Species_185,Gujarat,49.1,4.1,35.0,7.4,3.96,6
+Unknown_Indian_Species_093,Gujarat,36.3,4.33,16.0,9.76,2.87,6
+Indian Grey Hornbill,Gujarat,86.7,0.97,19.0,3.4,3.06,6
+Ruddy Turnstone,Gujarat,41.8,4.42,26.0,7.24,3.1,6
+Indian Paradise Flycatcher (Male),Gujarat,17.7,5.8,59.0,10.46,3.64,6
+Unknown_Indian_Species_011,Gujarat,45.6,4.4,16.0,10.15,2.97,6
+Indian Peafowl (Alt 2),Gujarat,67.6,1.63,10.0,6.32,2.66,6
+Black-necked Stork,Gujarat,95.2,2.13,15.0,4.31,1.44,6
+Unknown_Indian_Species_108,Gujarat,56.0,1.01,42.0,10.94,5.95,6
+Chestnut Munia,Gujarat,13.4,5.19,37.0,13.31,3.08,6
+Brown-cheeked Fulvetta (Alt),Gujarat,20.6,3.76,22.0,9.36,2.06,6
+Great Hornbill,Haryana,75.9,0.75,21.0,5.1,3.24,7
+Black-tailed Godwit,Haryana,39.0,3.72,31.0,9.37,3.81,7
+Unknown_Indian_Species_072,Haryana,28.9,3.15,38.0,10.13,5.47,7
+Baer's Pochard,Haryana,40.9,2.6,45.0,7.12,5.99,7
+Little Tern (Alt 2),Haryana,53.9,2.49,18.0,8.96,5.64,7
+Unknown_Indian_Species_015,Haryana,22.9,1.28,34.0,7.59,2.5,7
+Cattle Egret,Haryana,97.5,1.67,30.0,4.3,3.98,7
+Unknown_Indian_Species_073,Haryana,41.2,2.59,34.0,8.72,5.17,7
+Unknown_Indian_Species_047,Haryana,24.6,3.29,43.0,10.08,4.88,7
+Northern Pintail,Haryana,28.6,2.58,22.0,8.66,5.31,7
+Grey Heron,Haryana,83.9,1.96,18.0,4.71,3.0,7
+Unknown_Indian_Species_133,Haryana,35.0,1.53,44.0,8.9,2.36,7
+Unknown_Indian_Species_123,Haryana,23.4,2.51,38.0,9.96,5.25,7
+Unknown_Indian_Species_184,Haryana,42.3,3.05,32.0,9.25,4.68,7
+Watercock,Haryana,36.4,4.06,45.0,10.0,5.47,7
+Unknown_Indian_Species_016,Haryana,48.8,4.39,34.0,8.25,2.41,7
+Unknown_Indian_Species_126,Haryana,40.3,1.54,30.0,7.9,2.43,7
+Indian Peafowl (Hybrid),Haryana,110.7,1.24,16.0,5.3,3.42,7
+Yellow-browed Warbler,Haryana,16.5,5.9,69.0,13.07,4.93,7
+Black-naped Monarch,Haryana,21.1,4.25,41.0,9.77,2.12,7
+Laughing Dove,Himachal Pradesh,30.9,3.67,44.0,8.36,2.02,8
+Little Ringed Plover,Himachal Pradesh,54.8,2.98,27.0,7.28,4.96,8
+Unknown_Indian_Species_159,Himachal Pradesh,58.9,1.32,31.0,7.86,3.68,8
+Ruddy Shelduck (Alt),Himachal Pradesh,33.6,2.3,38.0,8.3,5.77,8
+Unknown_Indian_Species_096,Himachal Pradesh,43.8,4.09,19.0,7.63,4.47,8
+Wire-tailed Swallow,Himachal Pradesh,14.7,3.09,72.0,12.12,4.82,8
+Greenshank,Himachal Pradesh,36.6,1.75,31.0,7.46,3.72,8
+Greylag Goose,Himachal Pradesh,77.0,1.86,23.0,5.11,1.93,8
+Jungle Crow,Himachal Pradesh,28.8,4.45,16.0,7.03,3.21,8
+Ashy Prinia (Alt),Himachal Pradesh,10.1,2.55,46.0,11.45,3.36,8
+Olive-backed Sunbird,Himachal Pradesh,13.0,3.72,38.0,11.9,5.11,8
+Osprey,Himachal Pradesh,40.0,3.92,40.0,8.42,3.59,8
+Baya Weaver,Himachal Pradesh,49.7,2.53,29.0,10.68,5.45,8
+Hume's Leaf Warbler,Himachal Pradesh,13.8,4.29,75.0,13.2,3.87,8
+Indian Eagle-Owl,Himachal Pradesh,84.3,2.43,13.0,6.21,2.85,8
+Rufous-tailed Tailorbird,Himachal Pradesh,53.3,4.22,17.0,8.75,2.42,8
+Unknown_Indian_Species_042,Himachal Pradesh,37.4,2.4,17.0,8.58,3.24,8
+White Wagtail,Himachal Pradesh,33.6,2.17,20.0,7.31,4.53,8
+Common Cuckoo,Himachal Pradesh,41.2,1.68,39.0,8.4,4.91,8
+Unknown_Indian_Species_168,Himachal Pradesh,52.8,3.85,22.0,7.41,3.02,8
+Comb Duck (Female),Jharkhand,26.9,1.54,39.0,9.62,2.71,9
+Unknown_Indian_Species_194,Jharkhand,50.9,2.73,39.0,9.25,4.32,9
+Unknown_Indian_Species_191,Jharkhand,47.2,4.09,35.0,9.54,4.5,9
+Greater Racket-tailed Drongo,Jharkhand,54.6,3.2,19.0,8.76,3.88,9
+Unknown_Indian_Species_182,Jharkhand,45.3,3.79,33.0,7.22,4.03,9
+Lesser Short-toed Lark,Jharkhand,32.4,2.58,16.0,8.47,3.15,9
+Unknown_Indian_Species_027,Jharkhand,45.8,4.42,17.0,9.46,4.03,9
+Unknown_Indian_Species_101,Jharkhand,38.5,2.94,40.0,9.96,2.16,9
+Isabelline Wheatear,Jharkhand,56.4,3.0,21.0,8.29,3.9,9
+Black Francolin,Jharkhand,26.0,1.22,18.0,10.24,5.35,9
+Indian Nightjar,Jharkhand,59.3,1.3,35.0,7.69,2.99,9
+Blue-cheeked Bee-eater,Jharkhand,37.5,2.54,31.0,9.44,3.46,9
+Unknown_Indian_Species_058,Jharkhand,56.7,2.36,39.0,8.35,4.39,9
+Brahminy Kite,Jharkhand,51.6,3.27,17.0,8.32,4.23,9
+Lesser Adjutant,Jharkhand,35.5,1.88,42.0,9.63,5.63,9
+Purple Sunbird,Jharkhand,16.7,3.33,67.0,13.32,5.75,9
+Striated Laughingthrush,Jharkhand,32.4,3.3,36.0,8.57,4.38,9
+Unknown_Indian_Species_127,Jharkhand,57.5,2.08,27.0,9.57,3.31,9
+Brown Fish Owl,Jharkhand,25.1,3.46,45.0,9.96,4.74,9
+Unknown_Indian_Species_013,Jharkhand,41.1,3.26,28.0,9.03,2.07,9
+Bronzed Drongo,Karnataka,32.4,4.33,25.0,10.79,3.95,10
+Unknown_Indian_Species_100,Karnataka,29.1,1.48,17.0,8.18,5.15,10
+Unknown_Indian_Species_080,Karnataka,40.3,2.89,38.0,10.53,2.15,10
+Little Stint,Karnataka,33.5,3.68,19.0,9.39,2.62,10
+Desert Wheatear,Karnataka,27.2,3.42,34.0,10.24,2.66,10
+Unknown_Indian_Species_079,Karnataka,37.5,2.44,36.0,9.88,5.88,10
+Red-rumped Swallow,Karnataka,14.1,5.01,80.0,12.24,4.6,10
+Indian Paradise Flycatcher,Karnataka,11.1,5.23,60.0,14.52,3.58,10
+Indian Peafowl (Juvenile),Karnataka,100.7,1.64,22.0,4.85,1.85,10
+Oriental Turtle Dove,Karnataka,35.3,2.85,45.0,7.65,2.8,10
+Black-winged Kite,Karnataka,44.2,4.06,16.0,9.56,5.5,10
+Plain Prinia,Karnataka,13.5,2.41,63.0,14.26,3.86,10
+Clamorous Reed Warbler,Karnataka,15.6,3.09,62.0,10.74,4.31,10
+Brown Noddy,Karnataka,57.9,1.78,29.0,10.54,5.72,10
+Bengal Weaver,Karnataka,36.6,2.39,26.0,7.94,5.98,10
+Unknown_Indian_Species_136,Karnataka,35.0,1.1,44.0,7.4,4.86,10
+Unknown_Indian_Species_152,Karnataka,33.4,1.51,16.0,8.15,5.32,10
+Common Chiffchaff,Karnataka,47.8,1.49,37.0,8.88,4.46,10
+Little Owl,Karnataka,56.2,1.07,21.0,10.34,4.2,10
+Unknown_Indian_Species_083,Karnataka,49.1,2.85,18.0,10.1,2.95,10
+Unknown_Indian_Species_124,Kerala,24.9,1.83,35.0,10.18,3.83,11
+Sandgrouse,Kerala,24.4,4.17,34.0,9.14,4.53,11
+Great Reed Warbler,Kerala,13.8,4.87,48.0,12.15,4.84,11
+Rufous-necked Laughingthrush,Kerala,29.6,2.46,36.0,9.67,4.09,11
+Black-rumped Flameback,Kerala,34.4,4.34,32.0,9.03,5.95,11
+Comb Duck,Kerala,42.2,2.37,30.0,7.17,3.55,11
+Caspian Tern,Kerala,34.9,3.62,26.0,10.15,3.38,11
+Asian Brown Flycatcher,Kerala,15.3,4.51,79.0,12.91,5.27,11
+Changeable Hawk-Eagle,Kerala,68.0,1.2,18.0,6.25,1.53,11
+Unknown_Indian_Species_069,Kerala,51.2,2.63,37.0,8.91,2.73,11
+Painted Stork,Kerala,68.1,1.93,22.0,3.15,1.6,11
+Common Sandpiper (Alt),Kerala,51.6,4.1,25.0,10.73,4.06,11
+Glossy Ibis,Kerala,59.6,2.9,23.0,7.15,4.59,11
+Spot-billed Duck,Kerala,31.4,4.02,16.0,10.46,3.33,11
+Horned Lark,Kerala,25.0,2.29,43.0,8.6,3.76,11
+Eurasian Kestrel,Kerala,58.3,2.19,20.0,8.98,3.99,11
+Unknown_Indian_Species_003,Kerala,57.0,2.82,40.0,7.33,3.7,11
+Bronze-winged Jacana (Alt),Kerala,37.2,4.48,20.0,9.18,3.28,11
+Black-headed Ibis (Alt),Kerala,23.2,3.31,24.0,8.78,4.87,11
+White-bellied Sea Eagle,Kerala,70.0,1.39,22.0,5.67,3.61,11
+Unknown_Indian_Species_053,Madhya Pradesh,59.9,1.96,40.0,10.79,2.3,12
+Unknown_Indian_Species_033,Madhya Pradesh,45.5,2.27,40.0,10.0,2.64,12
+Siberian Rubythroat,Madhya Pradesh,21.2,3.97,36.0,10.13,2.14,12
+Great Egret,Madhya Pradesh,64.0,2.06,19.0,4.45,3.85,12
+Greater Spotted Eagle,Madhya Pradesh,61.9,0.81,22.0,6.8,2.12,12
+Unknown_Indian_Species_037,Madhya Pradesh,50.5,3.01,31.0,8.47,3.26,12
+Siberian Stonechat,Madhya Pradesh,31.1,4.36,15.0,9.94,4.0,12
+Asian Openbill,Madhya Pradesh,35.5,2.97,23.0,10.1,4.82,12
+Unknown_Indian_Species_119,Madhya Pradesh,28.6,3.14,37.0,10.67,3.96,12
+Plain Flowerpecker,Madhya Pradesh,24.9,3.98,29.0,7.69,4.85,12
+White-rumped Shama,Madhya Pradesh,59.9,3.84,45.0,10.38,3.28,12
+Black-headed Ibis,Madhya Pradesh,33.9,1.23,32.0,8.16,3.2,12
+Black-shouldered Kite,Madhya Pradesh,26.3,3.48,37.0,9.55,5.17,12
+Unknown_Indian_Species_022,Madhya Pradesh,40.4,1.42,21.0,10.17,2.95,12
+Jungle Owlet,Madhya Pradesh,39.8,2.26,33.0,8.48,5.21,12
+Spotted Sandgrouse (Alt),Madhya Pradesh,42.1,3.14,17.0,7.26,3.59,12
+Oriental Bay Owl,Madhya Pradesh,48.7,2.68,28.0,10.08,5.29,12
+White-eyed Buzzard,Madhya Pradesh,23.0,4.4,35.0,7.3,3.86,12
+Unknown_Indian_Species_115,Madhya Pradesh,40.7,1.45,41.0,10.12,4.56,12
+Indian Robin,Madhya Pradesh,27.3,4.38,28.0,9.01,5.47,12
+Unknown_Indian_Species_161,Maharashtra,53.3,2.81,24.0,7.66,3.29,13
+Black-hooded Oriole,Maharashtra,48.4,2.21,45.0,9.08,3.14,13
+Indian Jungle Crow,Maharashtra,23.2,1.69,45.0,9.2,2.5,13
+Unknown_Indian_Species_035,Maharashtra,32.1,2.87,31.0,9.56,4.37,13
+Unknown_Indian_Species_120,Maharashtra,43.2,1.6,34.0,9.88,4.42,13
+Indian Golden Oriole (Alt),Maharashtra,53.7,2.97,41.0,10.46,2.32,13
+Terek Sandpiper,Maharashtra,57.9,3.7,23.0,9.6,5.07,13
+Unknown_Indian_Species_102,Maharashtra,36.7,3.24,30.0,10.56,4.18,13
+Curlew Sandpiper,Maharashtra,45.7,2.06,22.0,10.22,4.74,13
+Oriental Honey Buzzard,Maharashtra,31.9,1.26,16.0,7.63,3.66,13
+Dunlin,Maharashtra,38.6,2.19,19.0,8.25,4.87,13
+Unknown_Indian_Species_014,Maharashtra,49.4,4.01,27.0,7.52,3.48,13
+River Lapwing,Maharashtra,42.5,2.12,29.0,7.49,3.8,13
+Ruff,Maharashtra,25.6,1.18,45.0,8.54,4.46,13
+Grey Francolin,Maharashtra,29.9,4.03,20.0,10.25,5.74,13
+White-throated Kingfisher,Maharashtra,48.8,1.66,20.0,8.99,4.06,13
+Temminck's Stint,Maharashtra,40.0,2.08,15.0,7.36,3.57,13
+Unknown_Indian_Species_197,Maharashtra,38.3,1.84,33.0,8.41,2.2,13
+Unknown_Indian_Species_151,Maharashtra,39.8,4.09,35.0,9.69,3.14,13
+Slender-billed Vulture,Maharashtra,60.5,0.71,12.0,6.53,3.18,13
+River Tern,Manipur,50.6,2.28,27.0,7.2,4.25,14
+Lesser Whistling Duck,Manipur,34.5,2.01,27.0,9.02,5.06,14
+Unknown_Indian_Species_121,Manipur,31.2,4.46,36.0,9.44,2.51,14
+Broad-billed Sandpiper,Manipur,23.9,2.31,25.0,9.23,3.46,14
+Pallas's Gull,Manipur,25.8,3.11,27.0,9.0,2.18,14
+Unknown_Indian_Species_157,Manipur,25.5,2.17,30.0,9.08,2.6,14
+Unknown_Indian_Species_086,Manipur,55.7,1.49,44.0,9.45,2.65,14
+Crested Serpent Eagle,Manipur,119.4,1.98,17.0,5.37,2.52,14
+Unknown_Indian_Species_046,Manipur,40.4,2.71,33.0,8.2,5.26,14
+Unknown_Indian_Species_056,Manipur,34.7,3.36,28.0,9.33,5.19,14
+Common Starling,Manipur,49.0,3.41,15.0,9.39,3.06,14
+Unknown_Indian_Species_160,Manipur,46.2,4.4,33.0,9.31,4.89,14
+Little Grebe,Manipur,43.3,1.6,35.0,9.88,5.1,14
+Spotted Owlet,Manipur,35.2,3.88,22.0,7.13,5.79,14
+Fork-tailed Drongo,Manipur,24.4,1.07,25.0,8.68,3.65,14
+Cormorant,Manipur,72.2,1.5,27.0,6.68,3.62,14
+Red Junglefowl,Manipur,49.4,1.22,19.0,9.07,4.24,14
+Unknown_Indian_Species_183,Manipur,59.9,2.67,27.0,8.26,2.69,14
+Unknown_Indian_Species_055,Manipur,56.5,2.2,26.0,9.7,5.47,14
+Hodgson's Hawk-Cuckoo,Manipur,47.2,3.81,23.0,9.44,2.77,14
+Unknown_Indian_Species_113,Meghalaya,29.9,2.95,22.0,10.77,5.93,15
+Unknown_Indian_Species_137,Meghalaya,50.8,3.47,37.0,9.82,3.27,15
+Unknown_Indian_Species_171,Meghalaya,34.0,4.27,40.0,9.89,3.15,15
+Indian Peafowl (Female),Meghalaya,94.4,1.59,20.0,6.27,3.86,15
+Indian Peafowl (Male),Meghalaya,108.3,1.08,17.0,6.82,1.24,15
+Brahminy Starling,Meghalaya,57.0,3.3,38.0,8.92,2.81,15
+Hair-crested Drongo,Meghalaya,41.5,4.27,37.0,8.09,2.44,15
+Greater Noddy,Meghalaya,49.6,1.84,16.0,9.68,4.12,15
+Eurasian Skylark,Meghalaya,45.5,1.18,28.0,8.32,3.89,15
+Peregrine Falcon,Meghalaya,47.2,1.48,45.0,9.2,5.72,15
+Common Pochard,Meghalaya,36.3,4.27,43.0,8.9,4.6,15
+White-headed Duck,Meghalaya,50.2,2.01,24.0,9.58,5.63,15
+Eurasian Collared-Dove,Meghalaya,23.6,3.01,32.0,9.95,5.4,15
+Unknown_Indian_Species_050,Meghalaya,21.5,4.23,28.0,10.53,2.7,15
+Coppersmith Barbet,Meghalaya,56.8,4.49,27.0,10.15,2.75,15
+Unknown_Indian_Species_001,Meghalaya,50.0,4.05,24.0,10.51,2.04,15
+Unknown_Indian_Species_144,Meghalaya,42.7,1.38,25.0,8.14,5.96,15
+Richard's Pipit,Meghalaya,13.4,3.98,38.0,14.26,4.4,15
+Rufous-bellied Crake,Meghalaya,27.7,1.39,20.0,9.92,4.59,15
+Sanderling,Meghalaya,48.7,1.05,25.0,10.16,4.27,15
+Asian Golden Weaver,Mizoram,50.3,1.61,42.0,9.55,3.62,16
+Unknown_Indian_Species_105,Mizoram,37.1,2.15,27.0,9.68,2.74,16
+Common Sandpiper,Mizoram,25.6,2.13,22.0,7.03,3.53,16
+Caspian Gull (Alt),Mizoram,37.9,1.93,25.0,8.21,4.89,16
+Unknown_Indian_Species_188,Mizoram,20.5,3.29,37.0,7.95,4.67,16
+Wood Sandpiper (Alt),Mizoram,38.6,1.56,36.0,9.01,5.58,16
+Unknown_Indian_Species_129,Mizoram,48.1,2.09,18.0,9.55,5.76,16
+Black Kite,Mizoram,34.7,1.77,45.0,7.53,2.61,16
+Unknown_Indian_Species_074,Mizoram,49.9,3.12,28.0,9.81,5.65,16
+Unknown_Indian_Species_170,Mizoram,50.3,3.81,41.0,7.87,2.99,16
+Unknown_Indian_Species_107,Mizoram,50.2,4.06,17.0,9.1,4.11,16
+Unknown_Indian_Species_052,Mizoram,34.5,4.21,18.0,7.25,4.19,16
+River Tern (Alt),Mizoram,40.2,3.0,19.0,7.66,5.42,16
+Little Egret,Mizoram,86.5,1.86,30.0,5.33,1.27,16
+Pale-chinned Flycatcher,Mizoram,13.1,5.23,59.0,10.66,4.25,16
+Unknown_Indian_Species_106,Mizoram,42.6,2.96,36.0,10.23,4.89,16
+Rufous Woodpecker,Mizoram,35.8,3.86,38.0,7.87,2.29,16
+Unknown_Indian_Species_085,Mizoram,36.9,3.45,32.0,10.98,5.74,16
+Knob-billed Duck,Mizoram,22.8,4.27,16.0,8.15,2.72,16
+Steppe Eagle,Mizoram,68.1,1.78,28.0,6.86,2.12,16
+Slaty-breasted Rail,Nagaland,55.7,2.57,44.0,10.63,3.5,17
+Egyptian Vulture,Nagaland,101.0,1.82,25.0,4.94,3.58,17
+Unknown_Indian_Species_019,Nagaland,59.7,2.38,19.0,9.91,2.89,17
+Black-headed Gull (Alt),Nagaland,20.1,1.08,24.0,8.85,4.88,17
+Unknown_Indian_Species_135,Nagaland,37.0,2.33,22.0,7.99,3.38,17
+Unknown_Indian_Species_149,Nagaland,31.0,4.28,38.0,10.06,2.13,17
+Unknown_Indian_Species_172,Nagaland,46.4,3.15,44.0,10.54,2.06,17
+Golden-backed Woodpecker,Nagaland,28.2,1.35,16.0,8.79,4.69,17
+Unknown_Indian_Species_017,Nagaland,54.9,1.86,16.0,8.61,2.94,17
+Unknown_Indian_Species_094,Nagaland,28.7,4.02,16.0,7.56,5.97,17
+Unknown_Indian_Species_061,Nagaland,29.4,4.21,33.0,8.28,4.39,17
+Caspian Plover,Nagaland,46.9,2.12,24.0,10.51,5.94,17
+Unknown_Indian_Species_054,Nagaland,40.9,2.45,23.0,7.24,5.79,17
+Unknown_Indian_Species_097,Nagaland,55.2,4.19,35.0,9.72,4.22,17
+Common Swift,Nagaland,8.5,3.38,71.0,13.36,5.36,17
+Unknown_Indian_Species_196,Nagaland,32.7,2.46,19.0,8.2,2.74,17
+Common Kestrel,Nagaland,41.5,1.84,22.0,8.2,4.83,17
+Asian Desert Warbler,Nagaland,16.1,5.66,65.0,12.06,4.25,17
+Rock Pigeon,Nagaland,41.2,2.36,23.0,7.81,4.59,17
+Chestnut-bellied Sandgrouse,Nagaland,56.9,3.96,17.0,9.14,5.32,17
+Satyr Tragopan,Odisha,22.1,2.32,34.0,9.41,5.49,18
+Wood Sandpiper,Odisha,27.5,3.67,38.0,9.69,2.87,18
+Rufous-bellied Eagle,Odisha,72.5,2.31,17.0,6.83,1.05,18
+Openbill Stork,Odisha,116.2,2.42,11.0,5.99,3.26,18
+Whiskered Tern,Odisha,56.6,3.43,37.0,7.82,5.66,18
+Unknown_Indian_Species_179,Odisha,42.1,3.71,27.0,8.87,4.59,18
+Common Skylark,Odisha,32.3,2.26,43.0,8.99,2.39,18
+Little Cormorant,Odisha,118.9,1.44,18.0,6.66,2.11,18
+Water Pipit,Odisha,12.1,4.25,44.0,13.71,3.05,18
+Willow Warbler,Odisha,13.5,4.34,76.0,12.09,3.46,18
+Unknown_Indian_Species_075,Odisha,33.2,2.33,41.0,7.98,4.2,18
+Unknown_Indian_Species_040,Odisha,57.7,2.18,39.0,10.29,5.87,18
+White-breasted Kingfisher,Odisha,45.7,2.72,20.0,9.93,3.41,18
+Unknown_Indian_Species_195,Odisha,25.6,2.91,20.0,10.67,4.17,18
+White-rumped Munia,Odisha,14.4,2.23,32.0,14.2,3.22,18
+Bridled Tern,Odisha,52.7,1.17,15.0,8.65,5.37,18
+Indian Peafowl,Odisha,73.9,1.91,8.0,3.87,2.37,18
+Western Tragopan,Odisha,22.4,3.23,44.0,9.47,3.93,18
+Chukar Partridge,Odisha,39.5,1.02,32.0,8.65,2.07,18
+Indian Swiftlet,Odisha,15.2,4.14,48.0,10.09,5.44,18
+Brown-headed Julia,Punjab,47.0,3.82,44.0,7.72,5.67,19
+Unknown_Indian_Species_141,Punjab,41.0,1.84,34.0,9.11,5.26,19
+Brahminy Myna,Punjab,30.7,2.39,26.0,10.84,3.84,19
+Unknown_Indian_Species_128,Punjab,29.7,3.44,24.0,9.74,5.39,19
+Unknown_Indian_Species_167,Punjab,46.1,4.0,39.0,7.13,3.62,19
+Unknown_Indian_Species_117,Punjab,35.1,2.67,35.0,7.04,2.69,19
+Lemon-rumped Warbler,Punjab,13.0,3.74,80.0,11.66,5.93,19
+Common Redshank,Punjab,59.0,4.13,44.0,7.17,2.85,19
+Indian Courser,Punjab,54.7,4.11,30.0,8.08,5.7,19
+Common Moorhen,Punjab,47.4,1.98,32.0,9.25,2.13,19
+Spotted Redshank,Punjab,57.2,2.1,45.0,7.83,2.58,19
+Unknown_Indian_Species_029,Punjab,52.8,3.87,44.0,7.31,2.65,19
+Grey-headed Swamphen,Punjab,29.6,3.92,27.0,9.71,4.16,19
+Unknown_Indian_Species_081,Punjab,35.4,3.59,40.0,10.95,4.9,19
+Unknown_Indian_Species_007,Punjab,40.0,4.41,16.0,7.39,2.93,19
+Unknown_Indian_Species_049,Punjab,23.0,3.12,34.0,10.82,3.59,19
+House Sparrow,Punjab,15.7,2.12,47.0,13.92,4.35,19
+Unknown_Indian_Species_143,Punjab,29.1,2.94,27.0,8.73,4.72,19
+Unknown_Indian_Species_158,Punjab,46.4,1.3,34.0,8.18,2.99,19
+White-rumped Vulture,Punjab,64.4,1.04,20.0,5.85,2.9,19
+Bluethroat,Rajasthan,49.6,2.11,18.0,7.37,5.77,20
+Indian Thick-knee,Rajasthan,37.8,3.66,18.0,7.53,2.75,20
+Verditer Flycatcher,Rajasthan,12.5,4.22,56.0,10.52,3.27,20
+Sandwich Tern,Rajasthan,42.2,3.09,40.0,8.3,3.54,20
+Unknown_Indian_Species_110,Rajasthan,31.7,2.36,17.0,9.9,4.24,20
+Unknown_Indian_Species_134,Rajasthan,59.7,1.85,31.0,7.68,3.52,20
+Unknown_Indian_Species_023,Rajasthan,25.6,2.05,30.0,7.58,2.67,20
+Kalij Pheasant (Alt),Rajasthan,76.6,1.1,10.0,4.44,3.83,20
+Unknown_Indian_Species_131,Rajasthan,48.8,2.74,34.0,7.78,2.43,20
+Black-winged Stilt,Rajasthan,32.2,4.32,25.0,10.37,3.52,20
+Unknown_Indian_Species_008,Rajasthan,54.5,2.54,28.0,10.26,5.44,20
+Unknown_Indian_Species_062,Rajasthan,59.0,1.48,25.0,9.41,4.78,20
+Indian Roller,Rajasthan,39.2,1.62,27.0,10.87,3.17,20
+Pied Wagtail,Rajasthan,47.8,2.72,33.0,10.13,3.3,20
+Greater Short-toed Lark,Rajasthan,31.2,3.75,26.0,7.46,4.26,20
+Unknown_Indian_Species_163,Rajasthan,43.7,2.91,36.0,10.07,2.11,20
+Besra,Rajasthan,49.1,4.3,21.0,8.75,3.17,20
+Unknown_Indian_Species_060,Rajasthan,47.7,3.87,40.0,10.18,4.69,20
+Loten's Sunbird,Rajasthan,9.4,3.21,46.0,13.29,5.15,20
+Large-billed Crow,Rajasthan,51.6,1.26,34.0,8.92,3.6,20
+Unknown_Indian_Species_189,Sikkim,40.3,4.22,37.0,8.67,2.15,21
+Sooty Tern,Sikkim,58.7,3.46,40.0,9.15,4.55,21
+Common Palm Swift,Sikkim,8.8,5.08,72.0,13.32,3.5,21
+Unknown_Indian_Species_174,Sikkim,44.5,2.97,35.0,9.71,3.6,21
+Unknown_Indian_Species_044,Sikkim,50.1,4.38,28.0,7.42,2.39,21
+Unknown_Indian_Species_150,Sikkim,28.9,3.61,32.0,9.32,4.3,21
+Spotted Redshank (Alt),Sikkim,37.8,2.37,39.0,9.72,4.76,21
+Barn Owl,Sikkim,26.0,4.49,30.0,7.42,3.66,21
+Great Thick-knee,Sikkim,58.5,1.41,45.0,9.92,3.39,21
+Common Teal,Sikkim,33.7,3.74,31.0,8.93,3.9,21
+Unknown_Indian_Species_025,Sikkim,37.5,3.44,25.0,7.27,2.18,21
+Unknown_Indian_Species_153,Sikkim,48.4,1.08,25.0,9.59,4.71,21
+Lesser Spotted Eagle,Sikkim,69.9,2.47,15.0,5.06,2.66,21
+Common Coot,Sikkim,33.2,2.49,29.0,7.93,3.62,21
+Emerald Dove,Sikkim,27.4,3.24,28.0,8.58,4.95,21
+Unknown_Indian_Species_114,Sikkim,55.3,2.57,28.0,8.56,4.82,21
+Streak-throated Swallow,Sikkim,10.1,5.01,80.0,10.31,3.31,21
+Ashy Drongo,Sikkim,54.9,1.65,25.0,7.79,2.46,21
+Common Shelduck,Sikkim,46.8,2.71,45.0,9.56,4.39,21
+White-faced Ibis,Sikkim,44.5,3.05,26.0,8.41,3.83,21
+Indian Skimmer,Tamil Nadu,26.9,3.36,40.0,8.19,4.46,22
+Unknown_Indian_Species_021,Tamil Nadu,23.4,1.47,18.0,7.95,2.47,22
+Rufous-fronted Prinia,Tamil Nadu,11.7,2.57,54.0,12.09,3.41,22
+Hill Partridge,Tamil Nadu,35.3,1.65,35.0,9.15,5.68,22
+Richard's Pipit (Alt),Tamil Nadu,17.3,2.69,40.0,12.45,3.42,22
+Unknown_Indian_Species_020,Tamil Nadu,32.6,2.58,16.0,10.46,5.81,22
+Indian Bush Lark,Tamil Nadu,39.4,1.68,27.0,10.86,4.02,22
+Unknown_Indian_Species_154,Tamil Nadu,39.8,3.4,28.0,9.84,3.78,22
+Yellow-bellied Prinia,Tamil Nadu,9.7,4.26,80.0,13.81,3.88,22
+Greater Coucal,Tamil Nadu,31.0,2.88,20.0,10.12,4.26,22
+Bonelli's Eagle,Tamil Nadu,106.4,1.49,24.0,3.45,1.34,22
+Roseate Tern,Tamil Nadu,51.0,3.88,26.0,9.17,5.03,22
+Black Drongo,Tamil Nadu,50.4,2.54,21.0,10.96,2.41,22
+Red-necked Falcon,Tamil Nadu,53.2,3.63,24.0,10.5,2.13,22
+Brown Fish Owl (Alt),Tamil Nadu,30.5,4.02,17.0,8.76,5.98,22
+Unknown_Indian_Species_099,Tamil Nadu,51.0,1.83,40.0,9.95,4.76,22
+Unknown_Indian_Species_103,Tamil Nadu,54.4,3.14,28.0,7.66,2.56,22
+Unknown_Indian_Species_165,Tamil Nadu,28.3,1.72,16.0,9.28,4.13,22
+Unknown_Indian_Species_087,Tamil Nadu,43.9,1.59,37.0,8.17,4.29,22
+Greylag Goose (Alt),Tamil Nadu,117.1,1.53,29.0,6.26,1.41,22
+Brown-headed Barbet,Telangana,50.0,2.44,16.0,10.97,5.47,24
+Red-wattled Lapwing,Telangana,25.1,4.03,22.0,7.58,3.29,24
+Jungle Prinia,Telangana,10.5,5.37,55.0,12.45,4.73,24
+Spangled Drongo,Telangana,30.7,2.45,29.0,7.3,5.18,24
+Ashy-crowned Sparrow-Lark,Telangana,15.7,3.61,77.0,11.39,5.81,24
+Unknown_Indian_Species_051,Telangana,34.8,4.33,25.0,9.33,5.48,24
+Indian Pond Heron,Telangana,110.8,0.69,22.0,5.54,3.09,24
+Unknown_Indian_Species_059,Telangana,54.0,3.78,27.0,7.87,3.72,24
+Yellow Wagtail,Telangana,28.5,1.94,41.0,8.13,4.19,24
+Great Cormorant,Telangana,67.8,2.2,18.0,6.58,3.29,24
+Unknown_Indian_Species_036,Telangana,21.8,3.19,41.0,8.84,2.5,24
+Unknown_Indian_Species_032,Telangana,54.3,2.54,15.0,10.97,3.71,24
+Unknown_Indian_Species_070,Telangana,59.8,4.18,43.0,9.6,2.64,24
+Tricolored Munia,Telangana,17.3,3.1,71.0,11.8,3.25,24
+Black-throated Laughingthrush,Telangana,46.6,3.27,16.0,8.59,3.22,24
+Malabar Grey Hornbill,Telangana,102.0,0.97,28.0,3.36,1.29,24
+Yellow Wagtail (Alt),Telangana,28.5,1.27,33.0,7.9,4.72,24
+Unknown_Indian_Species_164,Telangana,20.4,3.43,41.0,7.48,5.44,24
+Little Tern,Telangana,47.8,2.67,22.0,8.53,4.92,24
+Unknown_Indian_Species_112,Telangana,24.1,2.1,43.0,8.2,3.53,24
+Brown Prinia,Tripura,16.1,5.5,71.0,14.96,3.43,25
+Unknown_Indian_Species_145,Tripura,41.2,1.03,35.0,7.66,3.4,25
+Grey-headed Fish Eagle,Tripura,72.8,2.0,21.0,5.46,2.33,25
+Unknown_Indian_Species_139,Tripura,28.7,4.14,19.0,10.01,4.36,25
+Oriental Skylark,Tripura,35.4,4.37,25.0,10.16,2.99,25
+Unknown_Indian_Species_012,Tripura,45.8,1.87,34.0,9.4,4.43,25
+Koklass Pheasant,Tripura,106.7,1.88,29.0,6.5,1.62,25
+Sarus Crane,Tripura,96.4,0.88,20.0,4.18,1.16,25
+Unknown_Indian_Species_142,Tripura,55.9,4.34,30.0,8.54,2.96,25
+Kentish Plover,Tripura,45.5,1.25,43.0,10.91,5.95,25
+Whimbrel,Tripura,57.4,1.46,42.0,10.36,3.68,25
+Slender-billed Gull,Tripura,41.9,1.6,30.0,10.82,5.08,25
+Rusty-cheeked Scimitar Babbler,Tripura,20.7,1.24,23.0,7.86,5.69,25
+Unknown_Indian_Species_118,Tripura,57.9,2.39,24.0,9.51,4.0,25
+Darter (Oriental Darter Alt),Tripura,36.6,3.46,17.0,9.56,4.15,25
+Zitting Cisticola,Tripura,26.1,1.29,17.0,9.05,2.81,25
+Indian Silverbill (Alt),Tripura,16.1,4.15,55.0,12.93,5.29,25
+White-naped Woodpecker,Tripura,46.0,3.25,24.0,9.79,4.92,25
+Oriental Magpie-Robin (Alt),Tripura,53.9,1.2,17.0,10.7,2.46,25
+Nilgiri Flowerpecker,Tripura,44.5,1.19,36.0,9.97,4.96,25
+Asian Palm Swift,Uttar Pradesh,9.2,4.83,74.0,10.06,4.49,26
+Hill Swallow,Uttar Pradesh,11.5,4.07,76.0,11.3,4.12,26
+Unknown_Indian_Species_066,Uttar Pradesh,50.0,4.06,38.0,10.55,5.09,26
+Red-necked Stint,Uttar Pradesh,21.2,3.82,23.0,9.1,3.05,26
+Imperial Eagle,Uttar Pradesh,118.5,1.76,23.0,4.82,2.08,26
+Unknown_Indian_Species_193,Uttar Pradesh,40.0,2.98,26.0,7.63,5.09,26
+Crimson Sunbird,Uttar Pradesh,16.9,4.7,37.0,11.14,4.53,26
+Kalij Pheasant,Uttar Pradesh,62.6,2.23,15.0,3.18,2.09,26
+Unknown_Indian_Species_082,Uttar Pradesh,56.8,1.63,45.0,10.43,4.21,26
+American Pipit,Uttar Pradesh,17.1,4.96,56.0,11.12,3.74,26
+Unknown_Indian_Species_076,Uttar Pradesh,56.6,2.12,41.0,7.31,3.49,26
+Blue-bearded Bee-eater,Uttar Pradesh,40.1,4.16,20.0,7.89,4.06,26
+Tufted Duck,Uttar Pradesh,21.8,2.4,43.0,8.86,3.13,26
+Golden Eagle,Uttar Pradesh,110.7,1.15,25.0,4.83,2.11,26
+Common Pheasant,Uttar Pradesh,77.5,2.07,27.0,3.97,2.1,26
+Asian Koel,Uttar Pradesh,58.9,4.49,39.0,7.78,5.6,26
+House Crow,Uttar Pradesh,50.4,1.86,15.0,10.73,2.1,26
+Unknown_Indian_Species_009,Uttar Pradesh,41.7,3.23,37.0,10.51,5.8,26
+Black Skimmer,Uttar Pradesh,20.1,3.3,42.0,9.95,3.23,26
+Chestnut-headed Bee-eater,Uttar Pradesh,28.2,4.44,28.0,8.97,2.24,26
+Unknown_Indian_Species_026,Uttarakhand,59.9,3.49,17.0,7.18,2.93,27
+Sand Lark,Uttarakhand,53.8,2.45,43.0,8.49,5.9,27
+Unknown_Indian_Species_109,Uttarakhand,23.4,1.33,19.0,9.55,3.58,27
+Indian Peafowl (Blue),Uttarakhand,95.5,0.62,29.0,6.86,1.71,27
+Himalayan Monal,Uttarakhand,30.4,2.1,40.0,8.57,5.33,27
+Golden Oriole,Uttarakhand,33.1,2.58,22.0,7.3,2.81,27
+Unknown_Indian_Species_006,Uttarakhand,51.2,3.05,19.0,7.42,3.8,27
+Chestnut-tailed Starling,Uttarakhand,32.6,1.42,26.0,10.86,2.83,27
+Unknown_Indian_Species_028,Uttarakhand,32.3,1.93,18.0,7.36,5.23,27
+Brown-headed Gull,Uttarakhand,32.2,3.47,34.0,7.16,5.34,27
+Unknown_Indian_Species_192,Uttarakhand,33.1,1.32,22.0,10.87,3.58,27
+White-throated Kingfisher (Alt),Uttarakhand,22.0,2.05,41.0,10.96,2.12,27
+Glossy Ibis (Alt),Uttarakhand,36.2,2.58,38.0,9.2,2.38,27
+Phylloscopus Warbler,Uttarakhand,9.0,5.18,37.0,10.06,5.49,27
+Unknown_Indian_Species_178,Uttarakhand,59.3,1.46,41.0,8.6,4.75,27
+Himalayan Bluetail,Uttarakhand,57.5,1.29,33.0,8.04,5.25,27
+Unknown_Indian_Species_190,Uttarakhand,20.9,1.23,43.0,9.58,5.24,27
+Scaly-breasted Munia,Uttarakhand,8.9,5.39,51.0,10.61,5.83,27
+Blue-tailed Bee-eater,Uttarakhand,22.0,4.23,28.0,10.29,3.58,27
+Forest Wagtail,Uttarakhand,21.2,3.39,20.0,8.42,5.63,27
+Unknown_Indian_Species_098,West Bengal,31.0,2.56,19.0,7.14,4.48,28
+Himalayan Griffon,West Bengal,29.8,2.03,28.0,10.53,3.92,28
+Unknown_Indian_Species_068,West Bengal,23.5,2.34,28.0,7.8,5.54,28
+White-bellied Drongo,West Bengal,41.0,3.21,40.0,9.17,2.08,28
+Purple Heron,West Bengal,82.9,1.93,23.0,5.18,2.45,28
+Unknown_Indian_Species_156,West Bengal,56.5,2.76,27.0,8.08,2.1,28
+Shikra,West Bengal,43.9,1.1,40.0,10.11,2.23,28
+Red-headed Vulture,West Bengal,119.5,1.56,26.0,7.0,3.92,28
+Heuglin's Gull,West Bengal,24.0,3.3,23.0,9.13,5.16,28
+Oriental Darter,West Bengal,49.5,3.67,45.0,7.88,5.39,28
+Bronze-winged Jacana,West Bengal,51.9,2.24,41.0,10.97,2.69,28
+Unknown_Indian_Species_071,West Bengal,29.5,2.11,38.0,9.79,5.66,28
+Common Crane,West Bengal,61.7,1.9,26.0,5.25,2.69,28
+White-bellied Woodpecker,West Bengal,27.5,4.46,43.0,10.88,4.17,28
+Oriental Reed Warbler,West Bengal,9.8,2.15,33.0,11.16,3.66,28
+Short-toed Snake Eagle,West Bengal,91.6,0.5,27.0,3.81,1.39,28
+Long-legged Buzzard,West Bengal,48.7,4.22,42.0,10.47,2.24,28
+White-browed Wagtail (Alt),West Bengal,25.9,3.47,19.0,10.1,5.39,28
+Bar-headed Goose,West Bengal,111.6,2.42,19.0,5.82,2.99,28
+Wreathed Hornbill,West Bengal,95.2,1.17,18.0,3.55,1.47,28
+Mystery Bird,Kerala,0.0,0.0,0.0,9.8,9.8,11
+NewBird123,Tamil Nadu,0.0,0.0,0.0,8.4,8.4,22
+sparrow,tamilnadu,14.0,15.0,13.0,13.0,7.0,23
+crow,tamilnadu,15.0,13.0,14.0,15.0,15.0,23

@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin - Settings | AEROSENSE</title>
+
+<style>
+/* ================= GLOBAL ================= */
+body {
+    margin: 0;
+    font-family: "Segoe UI", sans-serif;
+    background: #f1f8e9;
+}
+
+.page-overlay {
+    background: rgba(255,255,255,0.95);
+    min-height: 100vh;
+    padding: 30px 20px;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+    background: linear-gradient(90deg, #1b5e20, #2e7d32);
+    color: white;
+    padding: 16px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin-left: 24px;
+    font-size: 15px;
+    opacity: 0.95;
+    transition: opacity 0.25s ease;
+}
+
+.navbar a:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+/* ================= HEADER ================= */
+.container h1 {
+    text-align: center;
+    color: #1b5e20;
+    font-size: 34px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #444;
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+/* ================= SETTINGS TABS ================= */
+.tabs {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    justify-content: center;
+}
+
+.tab {
+    padding: 12px 25px;
+    border-radius: 8px;
+    background: #c8f7c5;
+    color: #1b5e20;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.25s ease;
+}
+
+.tab.active {
+    background: #2e7d32;
+    color: white;
+}
+
+.tab:hover {
+    transform: translateY(-2px);
+}
+
+/* ================= SETTINGS CARD ================= */
+.setting-section {
+    background: rgba(255,255,255,0.88);
+    padding: 25px 30px;
+    border-radius: 20px;
+    margin-bottom: 40px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+.setting-section h2 {
+    color: #1b5e20;
+    margin-bottom: 20px;
+}
+
+.input-box {
+    margin-bottom: 20px;
+}
+
+.input-box label {
+    font-weight: 600;
+    display: block;
+    margin-bottom: 8px;
+    color: #1b5e20;
+}
+
+.input-box input,
+.input-box select,
+.input-box textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+}
+
+.input-box textarea {
+    resize: vertical;
+}
+
+.toggle-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.toggle-label { font-weight: 600; color: #1b5e20; }
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border-radius: 24px;
+    transition: 0.4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+input:checked + .slider { background-color: #43a047; }
+input:checked + .slider:before { transform: translateX(26px); }
+
+/* ================= SAVE BUTTON ================= */
+.save-btn {
+    padding: 14px 28px;
+    border-radius: 8px;
+    border: none;
+    background: #43a047;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease, transform 0.25s ease;
+}
+
+.save-btn:hover {
+    background: #2e7d32;
+    transform: translateY(-2px);
+}
+
+/* ================= API KEYS TABLE ================= */
+.api-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.api-table th,
+.api-table td {
+    padding: 12px 10px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+.api-table th {
+    background: #c8f7c5;
+    color: #1b5e20;
+    font-weight: 600;
+}
+
+.api-table td {
+    background: #ffffff;
+    font-size: 14px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media(max-width:768px){
+    .tabs { flex-direction: column; align-items: center; }
+    .setting-section { padding: 20px; }
+}
+</style>
+
+<script>
+function showTab(tabName){
+    const tabs = document.querySelectorAll(".tab");
+    tabs.forEach(tab=>tab.classList.remove("active"));
+    document.getElementById(tabName+"Tab").classList.add("active");
+
+    const sections = document.querySelectorAll(".setting-section");
+    sections.forEach(sec=>sec.style.display="none");
+    document.getElementById(tabName).style.display="block";
+}
+
+window.onload=function(){
+    showTab("general");
+};
+</script>
+</head>
+
+<body>
+<div class="page-overlay">
+
+<!-- Navbar -->
+<div class="navbar">
+    <div class="logo">AEROSENSE</div>
+    <div>
+        <a href="admin_home.html">Dashboard</a>
+        <a href="users.html">Users</a>
+        <a href="predictions.html">Predictions</a>
+        <a href="analytics.html">Analytics</a>
+        <a href="reports.html">Reports</a>
+        <a href="system.html">System</a>
+        <a href="settings.html">Settings</a>
+        <a href="login.html">Logout</a>
+    </div>
+</div>
+
+<div class="container">
+<h1>System Settings</h1>
+<div class="subtitle">Manage and Configure System Preferences</div>
+
+<!-- Tabs -->
+<div class="tabs">
+    <div class="tab active" id="generalTab" onclick="showTab('general')">General</div>
+    <div class="tab" id="securityTab" onclick="showTab('security')">Security</div>
+    <div class="tab" id="notificationsTab" onclick="showTab('notifications')">Notifications</div>
+    <div class="tab" id="apiTab" onclick="showTab('api')">API</div>
+    <div class="tab" id="backupTab" onclick="showTab('backup')">Backup</div>
+    <div class="tab" id="advancedTab" onclick="showTab('advanced')">Advanced</div>
+</div>
+
+<!-- General Settings -->
+<div class="setting-section" id="general">
+    <h2>General Settings</h2>
+    <div class="input-box">
+        <label>Application Name</label>
+        <input type="text" value="AEROSENSE">
+    </div>
+    <div class="input-box">
+        <label>Default Language</label>
+        <select>
+            <option>English</option>
+            <option>Hindi</option>
+            <option>Spanish</option>
+        </select>
+    </div>
+    <div class="input-box">
+        <label>Time Zone</label>
+        <select>
+            <option>UTC+0</option>
+            <option>UTC+5:30</option>
+            <option>UTC+1</option>
+        </select>
+    </div>
+    <button class="save-btn">Save General Settings</button>
+</div>
+
+<!-- Security Settings -->
+<div class="setting-section" id="security" style="display:none">
+    <h2>Security Settings</h2>
+    <div class="toggle-container">
+        <span class="toggle-label">Enable Two-Factor Authentication</span>
+        <label class="toggle-switch">
+            <input type="checkbox" checked>
+            <span class="slider"></span>
+        </label>
+    </div>
+    <div class="toggle-container">
+        <span class="toggle-label">Require Strong Passwords</span>
+        <label class="toggle-switch">
+            <input type="checkbox" checked>
+            <span class="slider"></span>
+        </label>
+    </div>
+    <button class="save-btn">Save Security Settings</button>
+</div>
+
+<!-- Notifications Settings -->
+<div class="setting-section" id="notifications" style="display:none">
+    <h2>Notifications Settings</h2>
+    <div class="toggle-container">
+        <span class="toggle-label">Enable Email Alerts</span>
+        <label class="toggle-switch">
+            <input type="checkbox" checked>
+            <span class="slider"></span>
+        </label>
+    </div>
+    <div class="toggle-container">
+        <span class="toggle-label">Enable SMS Alerts</span>
+        <label class="toggle-switch">
+            <input type="checkbox">
+            <span class="slider"></span>
+        </label>
+    </div>
+    <button class="save-btn">Save Notifications Settings</button>
+</div>
+
+<!-- API Settings -->
+<div class="setting-section" id="api" style="display:none">
+    <h2>API Management</h2>
+    <table class="api-table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>API Key</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>ABCD1234XYZ</td>
+                <td>Active</td>
+                <td><button class="save-btn">Revoke</button></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>XYZ9876ABC</td>
+                <td>Inactive</td>
+                <td><button class="save-btn">Activate</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- Backup Settings -->
+<div class="setting-section" id="backup" style="display:none">
+    <h2>Backup Settings</h2>
+    <div class="input-box">
+        <label>Backup Frequency</label>
+        <select>
+            <option>Daily</option>
+            <option>Weekly</option>
+            <option>Monthly</option>
+        </select>
+    </div>
+    <div class="toggle-container">
+        <span class="toggle-label">Enable Automatic Backups</span>
+        <label class="toggle-switch">
+            <input type="checkbox" checked>
+            <span class="slider"></span>
+        </label>
+    </div>
+    <button class="save-btn">Save Backup Settings</button>
+</div>
+
+<!-- Advanced Settings -->
+<div class="setting-section" id="advanced" style="display:none">
+    <h2>Advanced Settings</h2>
+    <div class="input-box">
+        <label>Custom Configuration</label>
+        <textarea rows="5">Set custom configs here...</textarea>
+    </div>
+    <div class="toggle-container">
+        <span class="toggle-label">Enable Developer Mode</span>
+        <label class="toggle-switch">
+            <input type="checkbox">
+            <span class="slider"></span>
+        </label>
+    </div>
+    <button class="save-btn">Save Advanced Settings</button>
+</div>
+
+</div>
+</div>
+</body>
+</html>

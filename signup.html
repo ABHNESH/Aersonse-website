@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Aerosense Sign Up</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: "Segoe UI", sans-serif;
+        background: linear-gradient(135deg, #e8f5e9, #f1f8f6);
+        overflow-x: hidden;
+    }
+
+    .container {
+        display: flex;
+        min-height: 100vh;
+    }
+
+    .left-section {
+        width: 50%;
+        padding: 60px 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .signup-box {
+        width: 100%;
+        max-width: 480px;
+        background: white;
+        padding: 40px 35px;
+        border-radius: 18px;
+        box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    }
+
+    .logo {
+        width: 90px;
+        display: block;
+        margin: 0 auto 15px;
+    }
+
+    .title {
+        text-align: center;
+        font-size: 32px;
+        font-weight: 700;
+        color: #2e7d32;
+        margin-bottom: 5px;
+    }
+
+    .subtitle {
+        text-align: center;
+        color: #555;
+        margin-bottom: 30px;
+    }
+
+    .role-buttons {
+        display: flex;
+        background: #f1f8f6;
+        border-radius: 30px;
+        padding: 5px;
+        margin-bottom: 30px;
+    }
+
+    .role-buttons button {
+        flex: 1;
+        padding: 12px;
+        border: none;
+        border-radius: 30px;
+        background: transparent;
+        font-weight: 600;
+        cursor: pointer;
+        color: #444;
+    }
+
+    .role-buttons .active {
+        background: #2e7d32;
+        color: white;
+    }
+
+    .input-box {
+        margin-bottom: 18px;
+    }
+
+    .input-box label {
+        font-weight: 600;
+        margin-bottom: 6px;
+        display: block;
+        font-size: 14px;
+    }
+
+    .input-box input {
+        width: 100%;
+        padding: 12px;
+        border-radius: 10px;
+        border: 1px solid #ccc;
+        font-size: 15px;
+    }
+
+    .signup-btn {
+        width: 100%;
+        padding: 14px;
+        border-radius: 10px;
+        border: none;
+        background: #43a047;
+        color: white;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+
+    .signup-btn:hover {
+        background: #2e7d32;
+    }
+
+    .back-login {
+        text-align: center;
+        margin-top: 18px;
+    }
+
+    .back-login a {
+        text-decoration: none;
+        color: #444;
+        font-size: 14px;
+    }
+
+    .right-section {
+        width: 50%;
+        background: url("images/login.jpg") center/cover no-repeat;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 40px;
+    }
+
+    .overlay {
+        background: rgba(0, 70, 30, 0.5);
+        padding: 45px;
+        border-radius: 18px;
+        text-align: center;
+        color: white;
+    }
+
+    .overlay h1 {
+        font-size: 38px;
+        margin-bottom: 15px;
+    }
+
+    .overlay p {
+        font-size: 18px;
+        line-height: 1.5;
+    }
+
+    @media (max-width: 1000px) {
+        .container {
+            flex-direction: column;
+        }
+        .left-section, .right-section {
+            width: 100%;
+        }
+        .right-section {
+            height: 50vh;
+        }
+    }
+</style>
+
+<script>
+    let selectedRole = "user";
+
+    function switchRole(role) {
+        selectedRole = role;
+        document.getElementById("userBtn").classList.remove("active");
+        document.getElementById("adminBtn").classList.remove("active");
+        document.getElementById(role + "Btn").classList.add("active");
+    }
+
+    function signupUser(event) {
+        event.preventDefault();
+
+        // NO BACKEND — NO VALIDATION — DIRECT FLOW
+        alert("Signup successful!");
+
+        if (selectedRole === "user") {
+            window.location.href = "user_home.html";
+        } else {
+            window.location.href = "admin_home.html";
+        }
+    }
+</script>
+
+</head>
+<body>
+
+<div class="container">
+
+    <div class="left-section">
+        <div class="signup-box">
+
+            <img src="images/logo.png" class="logo">
+
+            <div class="title">AEROSENSE</div>
+            <div class="subtitle">Create Your Account</div>
+
+            <div class="role-buttons">
+                <button id="userBtn" class="active" onclick="switchRole('user')">User</button>
+                <button id="adminBtn" onclick="switchRole('admin')">Admin</button>
+            </div>
+
+            <form onsubmit="signupUser(event)">
+                <div class="input-box">
+                    <label>Full Name</label>
+                    <input type="text" required>
+                </div>
+
+                <div class="input-box">
+                    <label>Phone Number</label>
+                    <input type="text" required>
+                </div>
+
+                <div class="input-box">
+                    <label>Email</label>
+                    <input type="email" required>
+                </div>
+
+                <div class="input-box">
+                    <label>District</label>
+                    <input type="text" required>
+                </div>
+
+                <div class="input-box">
+                    <label>State</label>
+                    <input type="text" required>
+                </div>
+
+                <div class="input-box">
+                    <label>Password</label>
+                    <input type="password" required>
+                </div>
+
+                <div class="input-box">
+                    <label>Confirm Password</label>
+                    <input type="password" required>
+                </div>
+
+                <button type="submit" class="signup-btn">Create Account</button>
+            </form>
+
+            <div class="back-login">
+                <a href="login.html">← Back to Login</a>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="right-section">
+        <div class="overlay">
+            <h1>Join Smart Farming</h1>
+            <p>
+                Register to monitor bird health, analyze sensor data,
+                and improve farm productivity using IoT + AI insights.
+            </p>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

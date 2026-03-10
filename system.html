@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin - System Settings | AEROSENSE</title>
+
+<style>
+/* ================= GLOBAL ================= */
+body {
+    margin: 0;
+    font-family: "Segoe UI", sans-serif;
+    background: #f1f8e9;
+}
+
+.page-overlay {
+    background: rgba(255,255,255,0.95);
+    min-height: 100vh;
+    padding: 30px 20px;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+    background: linear-gradient(90deg, #1b5e20, #2e7d32);
+    color: white;
+    padding: 16px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin-left: 24px;
+    font-size: 15px;
+    opacity: 0.95;
+    transition: opacity 0.25s ease;
+}
+
+.navbar a:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+/* ================= HEADER ================= */
+.container h1 {
+    text-align: center;
+    color: #1b5e20;
+    font-size: 34px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #444;
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+/* ================= SYSTEM STATUS CARDS ================= */
+.system-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.system-card {
+    background: rgba(255,255,255,0.88);
+    padding: 25px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.system-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 26px rgba(0,0,0,0.18);
+}
+
+.system-title {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.system-value {
+    font-size: 28px;
+    font-weight: bold;
+    color: #2e7d32;
+}
+
+/* ================= ACTION BUTTONS ================= */
+.action-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.action-button {
+    padding: 12px 25px;
+    border-radius: 8px;
+    border: none;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s ease, transform 0.25s ease;
+}
+
+.restart { background: #f44336; }
+.restart:hover { background: #d32f2f; transform: translateY(-2px); }
+
+.backup { background: #43a047; }
+.backup:hover { background: #2e7d32; transform: translateY(-2px); }
+
+.update { background: #ff9800; }
+.update:hover { background: #f57c00; transform: translateY(-2px); }
+
+/* ================= LOGS TABLE ================= */
+.logs-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 40px;
+}
+
+.logs-table th,
+.logs-table td {
+    padding: 12px 10px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+.logs-table th {
+    background: #c8f7c5;
+    color: #1b5e20;
+    font-weight: 600;
+}
+
+.logs-table td {
+    background: #ffffff;
+    font-size: 14px;
+}
+
+/* Log Levels */
+.log-info { color: #1b5e20; font-weight: bold; }
+.log-warning { color: #ff9800; font-weight: bold; }
+.log-error { color: #f44336; font-weight: bold; }
+
+/* ================= FILTERS ================= */
+.filter-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.filter-section input,
+.filter-section select {
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.filter-section button {
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    background: #43a047;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.filter-section button:hover {
+    background: #2e7d32;
+}
+
+/* ================= PAGINATION ================= */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.page-item {
+    margin: 0 5px;
+    padding: 8px 14px;
+    border-radius: 6px;
+    background: #43a047;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.page-item:hover {
+    background: #2e7d32;
+}
+
+/* ================= RESPONSIVE ================= */
+@media(max-width:768px){
+    .system-cards { grid-template-columns: repeat(auto-fit, minmax(150px,1fr)); }
+    .filter-section { flex-direction: column; }
+    .filter-section input, .filter-section select, .filter-section button { width: 100%; }
+    .action-section { flex-direction: column; }
+}
+</style>
+
+<script>
+// Sample log data
+const logData = [
+    {time:"2025-12-12 09:30", level:"INFO", message:"System initialized successfully"},
+    {time:"2025-12-12 10:05", level:"WARNING", message:"High CPU usage detected"},
+    {time:"2025-12-12 11:15", level:"ERROR", message:"Database connection failed"},
+    {time:"2025-12-12 12:45", level:"INFO", message:"Backup completed"},
+    {time:"2025-12-12 13:30", level:"INFO", message:"User John Doe logged in"},
+    {time:"2025-12-12 14:10", level:"WARNING", message:"Memory usage exceeded threshold"},
+    {time:"2025-12-12 15:20", level:"ERROR", message:"Prediction service crashed"},
+    {time:"2025-12-12 16:05", level:"INFO", message:"System restarted successfully"},
+    {time:"2025-12-12 17:00", level:"INFO", message:"Configuration updated"},
+    {time:"2025-12-12 18:25", level:"ERROR", message:"Failed to send email alert"}
+];
+
+// Pagination
+let currentPage = 1;
+const rowsPerPage = 5;
+
+function displayLogs(page){
+    const tableBody = document.getElementById("logsTableBody");
+    tableBody.innerHTML = "";
+    const start = (page-1)*rowsPerPage;
+    const end = start+rowsPerPage;
+    const paginatedData = logData.slice(start,end);
+
+    paginatedData.forEach((log,index)=>{
+        const tr = document.createElement("tr");
+        tr.innerHTML = `
+            <td>${start + index + 1}</td>
+            <td>${log.time}</td>
+            <td class="${log.level==="INFO"?"log-info":log.level==="WARNING"?"log-warning":"log-error"}">${log.level}</td>
+            <td>${log.message}</td>
+        `;
+        tableBody.appendChild(tr);
+    });
+
+    displayPagination();
+}
+
+function displayPagination(){
+    const totalPages = Math.ceil(logData.length/rowsPerPage);
+    const pagination = document.getElementById("pagination");
+    pagination.innerHTML = "";
+    for(let i=1;i<=totalPages;i++){
+        const pageItem = document.createElement("div");
+        pageItem.className = "page-item";
+        pageItem.innerText = i;
+        if(i===currentPage) pageItem.style.background="#2e7d32";
+        pageItem.onclick = function(){ currentPage=i; displayLogs(i); };
+        pagination.appendChild(pageItem);
+    }
+}
+
+// Summary Cards
+function renderSummary(){
+    document.getElementById("uptime").innerText = "98.7%";
+    document.getElementById("cpuUsage").innerText = "55%";
+    document.getElementById("memoryUsage").innerText = "62%";
+}
+
+window.onload=function(){
+    renderSummary();
+    displayLogs(currentPage);
+};
+</script>
+
+</head>
+<body>
+<div class="page-overlay">
+
+<!-- Navbar -->
+<div class="navbar">
+    <div class="logo">AEROSENSE</div>
+    <div>
+        <a href="admin_home.html">Dashboard</a>
+        <a href="users.html">Users</a>
+        <a href="predictions.html">Predictions</a>
+        <a href="analytics.html">Analytics</a>
+        <a href="reports.html">Reports</a>
+        <a href="system.html">System</a>
+        <a href="login.html">Logout</a>
+    </div>
+</div>
+
+<div class="container">
+<h1>System Dashboard</h1>
+<div class="subtitle">Monitor and Manage System Settings & Logs</div>
+
+<!-- System Status Cards -->
+<div class="system-cards">
+    <div class="system-card">
+        <div class="system-title">System Uptime</div>
+        <div class="system-value" id="uptime">0%</div>
+    </div>
+    <div class="system-card">
+        <div class="system-title">CPU Usage</div>
+        <div class="system-value" id="cpuUsage">0%</div>
+    </div>
+    <div class="system-card">
+        <div class="system-title">Memory Usage</div>
+        <div class="system-value" id="memoryUsage">0%</div>
+    </div>
+</div>
+
+<!-- Action Buttons -->
+<div class="action-section">
+    <button class="action-button restart">Restart System</button>
+    <button class="action-button backup">Backup Data</button>
+    <button class="action-button update">Update Configuration</button>
+</div>
+
+<!-- Filter Logs -->
+<div class="filter-section">
+    <input type="date" id="logStartDate">
+    <input type="date" id="logEndDate">
+    <select id="logLevel">
+        <option value="">All Levels</option>
+        <option>INFO</option>
+        <option>WARNING</option>
+        <option>ERROR</option>
+    </select>
+    <button onclick="alert('Filter functionality to be implemented')">Apply Filter</button>
+</div>
+
+<!-- Logs Table -->
+<table class="logs-table">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Timestamp</th>
+            <th>Level</th>
+            <th>Message</th>
+        </tr>
+    </thead>
+    <tbody id="logsTableBody">
+        <!-- Populated by JS -->
+    </tbody>
+</table>
+
+<!-- Pagination -->
+<div class="pagination" id="pagination"></div>
+
+</div>
+</div>
+</body>
+</html>

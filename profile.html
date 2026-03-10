@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>User Profile - AEROSENSE</title>
+
+<style>
+/* ================= GLOBAL ================= */
+body {
+    margin: 0;
+    font-family: "Segoe UI", sans-serif;
+    background: url("images/profile_bg.jpg") center/cover fixed no-repeat;
+    background-size: cover;
+}
+
+.page-overlay {
+    background: rgba(232, 245, 233, 0.35);
+    min-height: 100vh;
+    padding: 50px 20px;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+    background: linear-gradient(90deg, #1b5e20, #2e7d32);
+    color: white;
+    padding: 16px 42px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin-left: 24px;
+    font-size: 15px;
+    opacity: 0.95;
+    transition: opacity 0.25s ease;
+}
+
+.navbar a:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+/* ================= CONTAINER ================= */
+.container {
+    width: 92%;
+    max-width: 1200px;
+    margin: 40px auto;
+    background: rgba(255,255,255,0.88);
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+}
+
+/* ================= PAGE HEADER ================= */
+h1 {
+    text-align: center;
+    color: #1b5e20;
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #444;
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+/* ================= PROFILE CARD ================= */
+.profile-card {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-bottom: 50px;
+}
+
+.avatar-section {
+    flex: 1 1 250px;
+    text-align: center;
+    background: rgba(255,255,255,0.9);
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+.avatar-section img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 4px solid #2e7d32;
+}
+
+.avatar-section button {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    background: #43a047;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.avatar-section button:hover {
+    background: #2e7d32;
+}
+
+/* ================= PROFILE FORM ================= */
+.profile-form {
+    flex: 2 1 500px;
+    background: rgba(255,255,255,0.95);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+.profile-form h2 {
+    color: #1b5e20;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #1b5e20;
+}
+
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+}
+
+.form-group input:focus, .form-group select:focus {
+    outline: none;
+    border-color: #43a047;
+    box-shadow: 0 0 5px rgba(67,160,71,0.5);
+}
+
+/* ================= BUTTONS ================= */
+.btn {
+    width: 100%;
+    padding: 14px;
+    background: #43a047;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.25s ease;
+}
+
+.btn:hover {
+    background: #2e7d32;
+    transform: translateY(-2px);
+}
+
+/* ================= ACCOUNT SETTINGS ================= */
+.settings-section {
+    margin-top: 50px;
+    background: rgba(255,255,255,0.95);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+.settings-section h2 {
+    color: #1b5e20;
+    margin-bottom: 25px;
+}
+
+.setting-group {
+    margin-bottom: 20px;
+}
+
+.setting-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #1b5e20;
+}
+
+.setting-group input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+}
+
+.setting-group input:focus {
+    outline: none;
+    border-color: #43a047;
+    box-shadow: 0 0 5px rgba(67,160,71,0.5);
+}
+
+/* ================= STATS CARDS ================= */
+.stats {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 35px;
+}
+
+.stat-card {
+    background: rgba(255,255,255,0.9);
+    padding: 20px;
+    border-radius: 18px;
+    flex: 1;
+    min-width: 180px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 26px rgba(0,0,0,0.18);
+}
+
+.stat-title {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+.stat-value {
+    font-size: 28px;
+    font-weight: bold;
+    color: #2e7d32;
+}
+
+/* ================= FOOTER ================= */
+footer {
+    text-align: center;
+    margin: 50px 0 25px;
+    color: #444;
+    font-size: 14px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media(max-width: 768px){
+    .profile-card { flex-direction: column; }
+    .stats { flex-direction: column; }
+}
+</style>
+
+<script>
+function updateProfile() {
+    alert("Profile update functionality coming soon!");
+}
+
+function changePassword() {
+    alert("Password change functionality coming soon!");
+}
+
+function uploadAvatar() {
+    alert("Avatar upload functionality coming soon!");
+}
+</script>
+</head>
+
+<body>
+<div class="page-overlay">
+
+<!-- Navbar -->
+<div class="navbar">
+    <div class="logo">AEROSENSE</div>
+    <div>
+        <a href="user_home.html">Dashboard</a>
+        <a href="predict.html">Predict</a>
+        <a href="my_reports.html">My Reports</a>
+        <a href="profile.html">Profile</a>
+        <a href="login.html">Logout</a>
+    </div>
+</div>
+
+<div class="container">
+
+<h1>User Profile</h1>
+<div class="subtitle">Manage your account and personal information</div>
+
+<!-- Profile Card -->
+<div class="profile-card">
+
+    <!-- Avatar -->
+    <div class="avatar-section">
+        <img src="images/profile.webp" alt="User Avatar">
+        <button onclick="uploadAvatar()">Upload New Avatar</button>
+    </div>
+
+    <!-- Profile Form -->
+    <div class="profile-form">
+        <h2>Personal Information</h2>
+        <div class="form-group">
+            <label>Full Name</label>
+            <input type="text" value="John Doe">
+        </div>
+        <div class="form-group">
+            <label>Email</label>
+            <input type="email" value="john@example.com">
+        </div>
+        <div class="form-group">
+            <label>Phone</label>
+            <input type="text" value="+91 9876543210">
+        </div>
+        <div class="form-group">
+            <label>Region</label>
+            <select>
+                <option>Andhra Pradesh</option>
+                <option>Telangana</option>
+                <option>Tamil Nadu</option>
+                <option>Karnataka</option>
+                <option>Kerala</option>
+                <option>Maharashtra</option>
+                <option>Odisha</option>
+                <option>West Bengal</option>
+                <option>Bihar</option>
+                <option>Uttar Pradesh</option>
+                <option>Gujarat</option>
+                <option>Rajasthan</option>
+                <option>Madhya Pradesh</option>
+                <option>Punjab</option>
+                <option>Haryana</option>
+                <option>Chhattisgarh</option>
+                <option>Jharkhand</option>
+                <option>Assam</option>
+                <option>Goa</option>
+                <option>Manipur</option>
+                <option>Mizoram</option>
+                <option>Tripura</option>
+                <option>Meghalaya</option>
+                <option>Sikkim</option>
+                <option>Arunachal Pradesh</option>
+                <option>Uttarakhand</option>
+                <option>Himachal Pradesh</option>
+                <option>Jammu & Kashmir</option>
+                <option>Ladakh</option>
+                <option>Delhi</option>
+            </select>
+        </div>
+        <button class="btn" onclick="updateProfile()">Update Profile</button>
+    </div>
+
+</div>
+
+<!-- Account Settings -->
+<div class="settings-section">
+<h2>Account Settings</h2>
+<div class="setting-group">
+    <label>Change Password</label>
+    <input type="password" placeholder="Enter new password">
+</div>
+<div class="setting-group">
+    <label>Confirm Password</label>
+    <input type="password" placeholder="Confirm new password">
+</div>
+<button class="btn" onclick="changePassword()">Update Password</button>
+</div>
+
+<!-- Stats Cards -->
+<div class="stats">
+    <div class="stat-card">
+        <div class="stat-title">Total Predictions</div>
+        <div class="stat-value">1,473</div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-title">Healthy Birds Predicted</div>
+        <div class="stat-value">1,096</div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-title">Unhealthy Birds Predicted</div>
+        <div class="stat-value">377</div>
+    </div>
+</div>
+
+</div>
+
+<footer>
+© 2025 AEROSENSE | Smart Bird Health Monitoring
+</footer>
+
+</div>
+</body>
+</html>

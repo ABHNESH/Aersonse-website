@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>AEROSENSE | Admin Dashboard</title>
+
+<style>
+/* ================= GLOBAL ================= */
+body {
+    margin: 0;
+    font-family: "Segoe UI", sans-serif;
+    background: url("images/user_home.jpg") center/cover fixed no-repeat;
+}
+
+/* 🔹 Reduced transparency */
+.page-overlay {
+    background: rgba(232, 245, 233, 0.30);
+    min-height: 100vh;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+    background: linear-gradient(90deg, #1b5e20, #2e7d32);
+    color: white;
+    padding: 16px 42px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin-left: 24px;
+    font-size: 15px;
+    opacity: 0.95;
+    transition: opacity 0.25s ease;
+}
+
+.navbar a:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+/* ================= LAYOUT ================= */
+.container {
+    width: 92%;
+    margin: 45px auto;
+}
+
+h1 {
+    text-align: center;
+    color: #1b5e20;
+    font-size: 34px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #444;
+    font-size: 18px;
+    margin-bottom: 45px;
+}
+
+/* ================= TOP STATS ================= */
+.top-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px,1fr));
+    gap: 25px;
+    margin-bottom: 55px;
+}
+
+.stat-box {
+    background: rgba(255,255,255,0.85);
+    border-radius: 20px;
+    padding: 24px;
+    text-align: center;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.stat-box:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 22px rgba(0,0,0,0.18);
+}
+
+.stat-title {
+    font-size: 14px;
+    color: #555;
+}
+
+.stat-value {
+    font-size: 32px;
+    font-weight: bold;
+    color: #2e7d32;
+}
+
+/* ================= SECTIONS ================= */
+.section {
+    margin-bottom: 60px;
+}
+
+.section-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #1b5e20;
+    margin-bottom: 20px;
+}
+
+/* ================= CARDS ================= */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+    gap: 30px;
+}
+
+.card {
+    background: rgba(255,255,255,0.85);
+    border-radius: 22px;
+    padding: 30px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 26px rgba(0,0,0,0.2);
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1b5e20;
+}
+
+.card-value {
+    font-size: 36px;
+    font-weight: bold;
+    color: #2e7d32;
+}
+
+.card-desc {
+    font-size: 14px;
+    color: #555;
+    margin-top: 10px;
+}
+
+/* ================= ACTIVITY ================= */
+.activity {
+    display: grid;
+    gap: 18px;
+}
+
+.activity-item {
+    background: rgba(255,255,255,0.88);
+    padding: 20px 24px;
+    border-radius: 16px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.activity-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.18);
+}
+
+.activity-item span {
+    font-weight: bold;
+    color: #1b5e20;
+}
+
+/* ================= SYSTEM HEALTH ================= */
+.health {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+    gap: 28px;
+}
+
+.health-box {
+    background: rgba(255,255,255,0.9);
+    padding: 26px;
+    border-radius: 20px;
+    text-align: center;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.health-box:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 22px rgba(0,0,0,0.18);
+}
+
+.health-status {
+    font-size: 28px;
+    font-weight: bold;
+    color: #2e7d32;
+}
+
+/* ================= NOTIFICATIONS ================= */
+.notifications {
+    display: grid;
+    gap: 16px;
+}
+
+.note {
+    background: rgba(255,255,255,0.92);
+    padding: 20px 24px;
+    border-left: 6px solid #2e7d32;
+    border-radius: 14px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.note:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.18);
+}
+
+/* ================= FOOTER ================= */
+footer {
+    text-align: center;
+    margin: 50px 0 25px;
+    color: #444;
+    font-size: 14px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="page-overlay">
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <div class="logo">AEROSENSE ADMIN</div>
+    <div>
+        <a href="admin_home.html">Dashboard</a>
+        <a href="users.html">Users</a>
+        <a href="predictions.html">Predictions</a>
+        <a href="analytics.html">Analytics</a>
+        <a href="reports.html">Reports</a>
+        <a href="system.html">System</a>
+        <a href="settings.html">Settings</a>
+        <a href="login.html">Logout</a>
+    </div>
+</div>
+
+<div class="container">
+
+<h1>Admin Dashboard</h1>
+<div class="subtitle">Centralized Monitoring & Intelligent Control</div>
+
+<!-- TOP STATS -->
+<div class="top-stats">
+    <div class="stat-box"><div class="stat-title">Total Users</div><div class="stat-value">128</div></div>
+    <div class="stat-box"><div class="stat-title">Administrators</div><div class="stat-value">4</div></div>
+    <div class="stat-box"><div class="stat-title">Bird Records</div><div class="stat-value">1473</div></div>
+    <div class="stat-box"><div class="stat-title">Predictions</div><div class="stat-value">1473</div></div>
+    <div class="stat-box"><div class="stat-title">Alerts Raised</div><div class="stat-value">377</div></div>
+</div>
+
+<!-- SYSTEM OVERVIEW -->
+<div class="section">
+<div class="section-title">System Overview</div>
+<div class="cards">
+    <div class="card">
+        <div class="card-title">Healthy Predictions</div>
+        <div class="card-value">1096</div>
+        <div class="card-desc">Birds classified as healthy</div>
+    </div>
+    <div class="card">
+        <div class="card-title">Unhealthy Detections</div>
+        <div class="card-value">377</div>
+        <div class="card-desc">Critical birds flagged</div>
+    </div>
+    <div class="card">
+        <div class="card-title">Model Accuracy</div>
+        <div class="card-value">92%</div>
+        <div class="card-desc">Machine learning performance</div>
+    </div>
+</div>
+</div>
+
+<!-- ACTIVITY -->
+<div class="section">
+<div class="section-title">Recent Activity</div>
+<div class="activity">
+    <div class="activity-item"><span>Admin:</span> System parameters updated</div>
+    <div class="activity-item"><span>User:</span> New bird data uploaded</div>
+    <div class="activity-item"><span>System:</span> Model retraining completed</div>
+    <div class="activity-item"><span>Alert:</span> Unhealthy bird detected</div>
+</div>
+</div>
+
+<!-- SYSTEM HEALTH -->
+<div class="section">
+<div class="section-title">System Health</div>
+<div class="health">
+    <div class="health-box">
+        <div class="card-title">Server Status</div>
+        <div class="health-status">Online</div>
+    </div>
+    <div class="health-box">
+        <div class="card-title">Database</div>
+        <div class="health-status">Connected</div>
+    </div>
+    <div class="health-box">
+        <div class="card-title">Prediction Engine</div>
+        <div class="health-status">Running</div>
+    </div>
+</div>
+</div>
+
+<!-- NOTIFICATIONS -->
+<div class="section">
+<div class="section-title">Notifications</div>
+<div class="notifications">
+    <div class="note">✔ System running smoothly</div>
+    <div class="note">⚠ 3 birds require medical attention</div>
+    <div class="note">ℹ Weekly system report available</div>
+</div>
+</div>
+
+</div>
+
+<footer>
+© 2025 AEROSENSE | Advanced Admin Dashboard
+</footer>
+
+</div>
+
+</body>
+</html>

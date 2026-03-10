@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>AEROSENSE | Bird Health Prediction</title>
+
+<style>
+/* ================= GLOBAL ================= */
+body {
+    margin: 0;
+    font-family: "Segoe UI", sans-serif;
+    background: url("images/predict.jpg") center/cover fixed no-repeat;
+}
+
+.page-overlay {
+    background: rgba(232, 245, 233, 0.30);
+    min-height: 100vh;
+    padding-bottom: 50px;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+    background: linear-gradient(90deg, #1b5e20, #2e7d32);
+    color: white;
+    padding: 16px 42px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin-left: 24px;
+    font-size: 15px;
+    opacity: 0.95;
+    transition: opacity 0.25s ease;
+}
+
+.navbar a:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+/* ================= CONTAINER ================= */
+.container {
+    width: 92%;
+    margin: 45px auto;
+}
+
+/* ================= PAGE HEADER ================= */
+h1 {
+    text-align: center;
+    color: #1b5e20;
+    font-size: 34px;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #444;
+    font-size: 18px;
+    margin-bottom: 45px;
+}
+
+/* ================= FORM CARDS ================= */
+.form-card {
+    background: rgba(255,255,255,0.88);
+    border-radius: 22px;
+    padding: 35px;
+    max-width: 600px;
+    margin: 0 auto 50px auto;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.form-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 26px rgba(0,0,0,0.18);
+}
+
+.input-box {
+    margin-bottom: 20px;
+}
+
+.input-box label {
+    font-weight: 600;
+    display: block;
+    margin-bottom: 8px;
+    color: #1b5e20;
+}
+
+.input-box input,
+.input-box select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+}
+
+.btn {
+    width: 100%;
+    padding: 14px;
+    background: #43a047;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.25s ease;
+}
+
+.btn:hover {
+    background: #2e7d32;
+    transform: translateY(-2px);
+}
+
+/* ================= RESULT BOX ================= */
+.result-box {
+    margin-top: 25px;
+    padding: 20px;
+    border-radius: 12px;
+    display: none;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.healthy {
+    background: #c8f7c5;
+    color: #1b5e20;
+}
+
+.unhealthy {
+    background: #ffcdd2;
+    color: #b71c1c;
+}
+
+/* ================= INFO CARDS ================= */
+.info-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.info-card {
+    background: rgba(255,255,255,0.85);
+    padding: 28px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    cursor: pointer;
+}
+
+.info-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 26px rgba(0,0,0,0.2);
+}
+
+.info-card span {
+    font-size: 40px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.info-card-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1b5e20;
+}
+
+.info-card-desc {
+    font-size: 14px;
+    color: #555;
+    margin-top: 8px;
+}
+
+/* ================= FOOTER ================= */
+footer {
+    text-align: center;
+    margin: 50px 0 25px;
+    color: #444;
+    font-size: 14px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media(max-width: 768px){
+    .info-cards { grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); }
+}
+</style>
+
+<script>
+async function predictBird(event){
+    event.preventDefault();
+    const birdName = document.getElementById("birdName").value;
+    const region = document.getElementById("region").value;
+    const frequency = parseFloat(document.getElementById("frequency").value);
+
+    const data = {bird_name: birdName, region: region, frequency: frequency};
+
+    try{
+        const response = await fetch("http://127.0.0.1:5000/predict", {
+            method: "POST",
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify(data)
+        });
+
+        const result = await response.json();
+
+        const box = document.getElementById("resultBox");
+        box.style.display = "block";
+
+        if(result.prediction === "Healthy"){
+            box.className = "result-box healthy";
+        } else {
+            box.className = "result-box unhealthy";
+        }
+
+        box.innerHTML = `Prediction: <b>${result.prediction}</b><br>Confidence: <b>${result.confidence}%</b>`;
+
+    } catch(err){
+        alert("Error connecting to backend.");
+    }
+}
+</script>
+</head>
+
+<body>
+
+<div class="page-overlay">
+
+<!-- Navbar -->
+<div class="navbar">
+    <div class="logo">AEROSENSE</div>
+    <div>
+        <a href="user_home.html">Dashboard</a>
+        <a href="predict.html">Predict</a>
+        <a href="my_reports.html">My Reports</a>
+        <a href="profile.html">Profile</a>
+        <a href="login.html">Logout</a>
+    </div>
+</div>
+
+<div class="container">
+<h1>Bird Health Prediction</h1>
+<div class="subtitle">Monitor and Predict Bird Health Easily</div>
+
+<div class="form-card">
+    <form onsubmit="predictBird(event)">
+        <div class="input-box">
+            <label>Bird Name</label>
+            <input type="text" id="birdName" required>
+        </div>
+
+        <div class="input-box">
+            <label>Region</label>
+            <select id="region" required>
+                <option value="">Select State</option>
+                <option>Andhra Pradesh</option>
+                <option>Arunachal Pradesh</option>
+                <option>Assam</option>
+                <option>Bihar</option>
+                <option>Chhattisgarh</option>
+                <option>Goa</option>
+                <option>Gujarat</option>
+                <option>Haryana</option>
+                <option>Himachal Pradesh</option>
+                <option>Jharkhand</option>
+                <option>Karnataka</option>
+                <option>Kerala</option>
+                <option>Madhya Pradesh</option>
+                <option>Maharashtra</option>
+                <option>Manipur</option>
+                <option>Meghalaya</option>
+                <option>Mizoram</option>
+                <option>Nagaland</option>
+                <option>Odisha</option>
+                <option>Punjab</option>
+                <option>Rajasthan</option>
+                <option>Sikkim</option>
+                <option>Tamil Nadu</option>
+                <option>Telangana</option>
+                <option>Tripura</option>
+                <option>Uttar Pradesh</option>
+                <option>Uttarakhand</option>
+                <option>West Bengal</option>
+                <option>Andaman and Nicobar Islands</option>
+                <option>Chandigarh</option>
+                <option>Dadra and Nagar Haveli and Daman & Diu</option>
+                <option>Delhi</option>
+                <option>Ladakh</option>
+                <option>Lakshadweep</option>
+                <option>Puducherry</option>
+            </select>
+        </div>
+
+        <div class="input-box">
+            <label>Frequency</label>
+            <input type="number" step="0.01" id="frequency" required>
+        </div>
+
+        <button class="btn" type="submit">Predict</button>
+    </form>
+
+    <div id="resultBox" class="result-box"></div>
+</div>
+
+<!-- INFO CARDS -->
+<div class="section">
+<div class="section-title">Quick Access</div>
+<div class="info-cards">
+    <div class="info-card" onclick="window.location.href='my_reports.html'">
+        <span>📊</span>
+        <div class="info-card-title">My Reports</div>
+        <div class="info-card-desc">View all your predictions</div>
+    </div>
+    <div class="info-card" onclick="window.location.href='profile.html'">
+        <span>👤</span>
+        <div class="info-card-title">Profile</div>
+        <div class="info-card-desc">Manage account settings</div>
+    </div>
+</div>
+</div>
+
+</div>
+
+<footer>
+© 2025 AEROSENSE | Smart Bird Health Monitoring
+</footer>
+
+</div>
+</body>
+</html>

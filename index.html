@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AeroSense – Intelligent Bird Health Monitoring</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: "Montserrat", sans-serif;
+            background: #f4f6f8;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        /* NAVBAR ----------------------------------------------------- */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: white;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            z-index: 1000;
+        }
+
+        .nav-left {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .logo img {
+            display: block;
+            width: 45px;
+            height: auto;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            font-size: 15px;
+            transition: .3s;
+        }
+
+        .nav-links a:hover {
+            color: #00c853;
+        }
+
+        .login-btn {
+            padding: 10px 26px;
+            border-radius: 8px;
+            background: #00c853;
+            color: white !important;
+            text-decoration: none;
+            font-weight: 600;
+            margin-left: 20px;
+            margin-right: 25px;
+            transition: .3s;
+        }
+
+        .login-btn:hover { 
+            background: #009d42;
+        }
+
+        /* HERO -------------------------------------------------------- */
+        .hero {
+            width: 100%;
+            height: 90vh;
+            background: url("../images/landing_img.jpg") center/cover no-repeat;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-top: 120px;
+            text-align: center;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0,0,0,0.45);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            animation: fadeIn 1.8s ease;
+            padding: 30px 30px;
+        }
+
+        .hero-content h1 { font-size: 32px; font-weight: 700; color: white; }
+        .hero-content p { font-size: 16px; color: #dce8ef; }
+
+        .btn {
+            padding: 12px 28px;
+            border-radius: 8px;
+            font-size: 15px;
+            text-decoration: none;
+            display: inline-block;
+            margin: 6px;
+            transition: .3s;
+            font-weight: 500;
+        }
+
+        .primary-btn { background: #00c853; color: white; }
+        .primary-btn:hover { background: #009d42; }
+
+        .outline-btn { border: 2px solid white; color: white; }
+        .outline-btn:hover { background: white; color: #002b41; }
+
+        /* SECTIONS --------------------------------------------------- */
+        section {
+            padding: 40px 60px;
+            max-width: 1400px;
+            margin: auto;
+        }
+
+        /* ABOUT ------------------------------------------------------ */
+        .about-wrapper {
+            display: flex;
+            gap: 20px;
+            align-items: stretch;
+            justify-content: space-between;
+        }
+
+        .about-box, .about-img {
+            flex: 1;
+            background: white;
+            padding: 25px;
+            border-radius: 18px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+        }
+
+        .about-box h2 {
+            margin-top: 0;
+            font-size: 26px;
+            color: #003f5c;
+            margin-bottom: 16px;
+        }
+
+        .about-box p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #444;
+        }
+
+        .about-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 18px;
+        }
+
+        /* WHAT WE DO (Horizontal scroll) ---------------------------- */
+        .services-container {
+            display: flex;
+            gap: 25px;
+            overflow-x: auto;
+            padding-bottom: 10px;
+        }
+
+        .service-box {
+            flex: 0 0 300px;
+            background: white;
+            padding: 28px;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+            transition: transform 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .service-box:hover { transform: translateY(-8px); }
+
+        .service-box h3 { color: #003f5c; margin-bottom: 10px; font-size: 20px; }
+        .service-box p { font-size: 15px; line-height: 1.5; flex-grow: 1; }
+
+        /* FAQ -------------------------------------------------------- */
+        .faq-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .faq-item {
+            background: white;
+            flex: 1 1 300px;
+            padding: 20px;
+            border-radius: 16px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+        }
+
+        .faq-item h3 {
+            font-size: 18px;
+            color: #0a5332;
+            margin-bottom: 8px;
+        }
+
+        .faq-item p {
+            margin: 0;
+            color: #444;
+        }
+
+        /* TESTIMONIALS / WHAT OTHERS SAY --------------------------- */
+        .testimonial-section {
+            padding: 50px 60px;
+            background: url("images/img.webp") center/cover no-repeat;
+            background-size: cover;
+            border-radius: 16px;
+        }
+
+        .testimonial-section h2 {
+            text-align: center;
+            font-size: 28px;
+            color: white;
+            margin-bottom: 30px;
+        }
+
+        .testimonial-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-between;
+        }
+
+        .testimonial-card {
+            background: rgba(255,255,255,0.85);
+            flex: 1 1 250px;
+            padding: 20px;
+            border-radius: 16px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+        }
+
+        .testimonial-card p {
+            font-style: italic;
+            color: #333;
+        }
+
+        .testimonial-card h4 {
+            margin-top: 10px;
+            font-size: 16px;
+            font-weight: 600;
+            color: #0a5332;
+        }
+
+        /* CONTACT --------------------------------------------------- */
+        .contact-wrapper {
+            display: flex;
+            gap: 20px;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .contact-form, .contact-cards {
+            flex: 1 1 300px;
+            background: white;
+            padding: 25px;
+            border-radius: 18px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 8px 12px;
+            margin-bottom: 12px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+        }
+
+        .contact-form textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        .contact-form button {
+            width: 100%;
+            padding: 14px;
+            background: #00a843;
+            border: none;
+            color: white;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .contact-cards {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .contact-card {
+            background: white;
+            padding: 20px;
+            border-radius: 16px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        .contact-card h3 {
+            margin: 0 0 10px 0;
+            font-size: 20px;
+            color: #0a5332;
+        }
+
+        @media (max-width: 980px) {
+            .about-wrapper, .contact-wrapper {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- NAVBAR --------------------------------------------------------- -->
+<nav>
+    <div class="nav-left">
+        <div class="logo">
+            <img src="images/logo.png" alt="AeroSense Logo">
+        </div>
+
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">What We Do</a>
+            <a href="#faq">FAQ</a>
+            <a href="#testimonials">Testimonials</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </div>
+
+    <a href="login.html" class="login-btn">Login / Register</a>
+</nav>
+
+<!-- HERO ----------------------------------------------------------- -->
+<div class="hero">
+    <div class="hero-content">
+        <h1>Empowering Bird Enthusiasts. Protecting Wildlife.</h1>
+        <p>AeroSense bridges the gap between bird owners, researchers, and conservationists using advanced AI and real-time insights, ensuring healthier birds and safer habitats.</p>
+
+        <a href="#about" class="btn primary-btn">Learn More</a>
+        <a href="login.html" class="btn outline-btn">Get Started</a>
+    </div>
+</div>
+
+<!-- ABOUT ---------------------------------------------------------- -->
+<section id="about">
+    <div class="about-wrapper">
+
+        <div class="about-box">
+            <h2>About AeroSense</h2>
+            <p>
+                AeroSense is a cutting-edge platform dedicated to monitoring and detecting the health status of birds. By combining advanced AI algorithms with real-time analytics, AeroSense allows bird enthusiasts, researchers, and wildlife conservationists to accurately assess the well-being of their feathered companions.
+
+                Our mission is to simplify bird conservation and make health monitoring accessible for everyone. We provide insights into activity patterns, feeding behaviors, and environmental influences, helping users intervene early in case of health issues. Through alerts, analytics, and interactive dashboards, AeroSense empowers proactive care and supports research on avian health trends.
+
+                By fostering collaboration between hobbyists, researchers, and conservationists, AeroSense strengthens efforts to protect bird populations and preserve biodiversity. From domestic pets to wild species, our platform ensures healthier birds and safer habitats, contributing to a more sustainable and informed approach to avian conservation.
+            </p>
+        </div>
+
+        <div class="about-img">
+            <img src="images/bird_health.jpg" alt="Bird Health">
+        </div>
+
+    </div>
+</section>
+
+<!-- WHAT WE DO ----------------------------------------------------- -->
+<section id="services">
+    <h2 style="text-align:center; font-size:28px; color:#003f5c;">What We Do</h2>
+
+    <div class="services-container">
+
+        <div class="service-box">
+            <h3>🧠 AI Health Detection</h3>
+            <p>Our advanced machine-learning engine analyzes bird images and behavior patterns...</p>
+        </div>
+        <div class="service-box">
+            <h3>📊 Live Data Monitoring</h3>
+            <p>We track bird activity, movement, feeding behavior, and sound patterns...</p>
+        </div>
+        <div class="service-box">
+            <h3>🔔 Instant Smart Alerts</h3>
+            <p>AeroSense instantly alerts you about abnormal behavior, sudden inactivity...</p>
+        </div>
+        <div class="service-box">
+            <h3>🌿 Conservation Insights</h3>
+            <p>Receive real-time insights on bird habitats, population trends...</p>
+        </div>
+        <div class="service-box extra1">
+            <h3>📈 Analytics & Reports</h3>
+            <p>Export data, generate reports, and visualize trends...</p>
+        </div>
+        <div class="service-box extra2">
+            <h3>🛠 Custom Alerts</h3>
+            <p>Set personalized notifications for different bird species...</p>
+        </div>
+        <div class="service-box extra3">
+            <h3>💾 Data Export</h3>
+            <p>Download historical data and insights for offline analysis...</p>
+        </div>
+        <div class="service-box extra4">
+            <h3>🌎 Community Insights</h3>
+            <p>Collaborate with other bird enthusiasts, researchers...</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- FAQ ----------------------------------------------------------- -->
+<section id="faq">
+    <h2 style="text-align:center; font-size:28px; color:#003f5c; margin-bottom:20px;">Frequently Asked Questions</h2>
+    <div class="faq-container">
+        <div class="faq-item">
+            <h3>1. How does AeroSense monitor bird health?</h3>
+            <p>It uses AI-driven image analysis and behavioral tracking to detect health issues early.</p>
+        </div>
+        <div class="faq-item">
+            <h3>2. Can I track multiple birds at once?</h3>
+            <p>Yes, you can add multiple birds and monitor their individual health profiles.</p>
+        </div>
+        <div class="faq-item">
+            <h3>3. How do I get alerts?</h3>
+            <p>Alerts can be sent via email or in-app notifications based on configured thresholds.</p>
+        </div>
+        <div class="faq-item">
+            <h3>4. Can I export the data?</h3>
+            <p>Yes, historical data and analytics reports can be downloaded in CSV or PDF format.</p>
+        </div>
+        <div class="faq-item">
+            <h3>5. Is my data secure?</h3>
+            <p>AeroSense uses encrypted storage and secure servers to protect your bird data.</p>
+        </div>
+    </div>
+</section>
+
+<!-- TESTIMONIALS -------------------------------------------------- -->
+<section id="testimonials" class="testimonial-section">
+    <h2>What Others Say</h2>
+
+    <div class="testimonial-container">
+        <div class="testimonial-card">
+            <p>"AeroSense helped me detect health issues in my parrots early. Absolutely lifesaving!"</p>
+            <h4>- Ramesh K.</h4>
+        </div>
+        <div class="testimonial-card">
+            <p>"The live data monitoring is amazing. I can keep track of all my birds effortlessly."</p>
+            <h4>- Priya S.</h4>
+        </div>
+        <div class="testimonial-card">
+            <p>"I love the community insights. Connecting with other bird enthusiasts is very helpful."</p>
+            <h4>- Arjun T.</h4>
+        </div>
+        <div class="testimonial-card">
+            <p>"Custom alerts saved my birds multiple times. Highly recommend AeroSense to all owners."</p>
+            <h4>- Neha P.</h4>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -------------------------------------------------------- -->
+<section id="contact">
+    <h2 style="text-align:center; font-size:28px; color:#003f5c; margin-bottom:10px;">
+        Contact Us
+    </h2>
+    <p style="text-align:center; color:#555; margin-bottom:40px;">
+        Get in touch for support, partnerships, or inquiries.
+    </p>
+
+    <div class="contact-wrapper">
+        <div class="contact-form">
+            <h3 style="color:#003f5c; margin-bottom:15px;">Send us a Message</h3>
+            <input type="text" placeholder="Your Name">
+            <input type="email" placeholder="Your Email">
+            <textarea placeholder="Your Message"></textarea>
+            <button>Send Message</button>
+        </div>
+        <div class="contact-cards">
+            <div class="contact-card">
+                <h3>📞 Phone</h3>
+                <p>+91 98765 43210</p>
+                <p>+91 98765 43211</p>
+            </div>
+            <div class="contact-card">
+                <h3>📧 Email</h3>
+                <p>support@aerosense.com</p>
+                <p>info@aerosense.com</p>
+            </div>
+            <div class="contact-card">
+                <h3>📍 Address</h3>
+                <p>AeroSense Headquarters<br>Tech Park, City Center<br>District, State - 1234</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER --------------------------------------------------------- -->
+<footer style="background:#0A4A24; color:white; padding:60px 80px 20px;">
+    <div style="display:grid; grid-template-columns: repeat(4, 1fr); gap:60px;">
+        <div>
+            <h2 style="margin:0; font-size:26px;">AeroSense</h2>
+            <p style="margin-top:15px; line-height:1.7;">AeroSense uses intelligent AI technology to detect bird health...</p>
+        </div>
+        <div>
+            <h3 style="margin-bottom:15px; font-size:20px;">About</h3>
+            <p>Our Story</p>
+            <p>Mission & Vision</p>
+            <p>Research Goals</p>
+            <p>Our Team</p>
+        </div>
+        <div>
+            <h3 style="margin-bottom:15px; font-size:20px;">Resources</h3>
+            <p>Bird Care Guide</p>
+            <p>FAQs</p>
+            <p>Privacy Policy</p>
+            <p>Terms of Use</p>
+        </div>
+        <div>
+            <h3 style="margin-bottom:15px; font-size:20px;">For Users</h3>
+            <p>Get Started</p>
+            <p>Support</p>
+            <p>Data Analytics</p>
+            <p>Become a Partner</p>
+        </div>
+    </div>
+
+    <hr style="margin:40px 0; border:0; border-top:1px solid rgba(255,255,255,0.2);">
+
+    <div style="display:flex; justify-content:space-between; align-items:center;">
+        <p style="margin:0; font-size:14px;">© 2025 AeroSense. All rights reserved.</p>
+        <a href="#" style="color:white; text-decoration:none; font-size:14px;">Back to Top</a>
+    </div>
+</footer>
+
+</body>
+</html>

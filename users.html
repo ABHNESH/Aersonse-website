@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin - Users Management | AEROSENSE</title>
+
+<style>
+/* ================= GLOBAL ================= */
+body {
+    margin: 0;
+    font-family: "Segoe UI", sans-serif;
+    background: #e8f5e9;
+}
+
+.page-overlay {
+    background: rgba(255,255,255,0.9);
+    min-height: 100vh;
+    padding: 30px 20px;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+    background: linear-gradient(90deg, #1b5e20, #2e7d32);
+    color: white;
+    padding: 16px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin-left: 24px;
+    font-size: 15px;
+    opacity: 0.95;
+    transition: opacity 0.25s ease;
+}
+
+.navbar a:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+/* ================= HEADER ================= */
+.container h1 {
+    text-align: center;
+    color: #1b5e20;
+    font-size: 34px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #444;
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+/* ================= SEARCH BAR ================= */
+.search-bar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.search-bar input[type="text"] {
+    width: 250px;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.search-bar button {
+    padding: 12px 20px;
+    border-radius: 8px;
+    border: none;
+    background: #43a047;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.search-bar button:hover {
+    background: #2e7d32;
+}
+
+/* ================= USERS TABLE ================= */
+.users-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 50px;
+}
+
+.users-table th, .users-table td {
+    padding: 14px 12px;
+    text-align: left;
+    border: 1px solid #ccc;
+}
+
+.users-table th {
+    background: #c8f7c5;
+    color: #1b5e20;
+    font-weight: 600;
+}
+
+.users-table td {
+    background: #ffffff;
+}
+
+.action-btn {
+    padding: 6px 12px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    margin-right: 5px;
+    transition: background 0.3s ease;
+}
+
+.edit-btn {
+    background: #2196f3;
+    color: white;
+}
+
+.edit-btn:hover {
+    background: #0b79d0;
+}
+
+.delete-btn {
+    background: #f44336;
+    color: white;
+}
+
+.delete-btn:hover {
+    background: #c62828;
+}
+
+.status-active {
+    background: #43a047;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 13px;
+}
+
+.status-inactive {
+    background: #f44336;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 13px;
+}
+
+/* ================= PAGINATION ================= */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pagination button {
+    padding: 8px 14px;
+    margin: 0 3px;
+    border: none;
+    border-radius: 6px;
+    background: #c8f7c5;
+    color: #1b5e20;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.pagination button:hover {
+    background: #a5e3a0;
+}
+
+.pagination button.active {
+    background: #1b5e20;
+    color: white;
+}
+
+/* ================= RESPONSIVE ================= */
+@media(max-width: 768px){
+    .search-bar { flex-direction: column; align-items: flex-start; }
+    .search-bar input[type="text"] { width: 100%; }
+    .users-table th, .users-table td { font-size: 14px; }
+}
+</style>
+
+<script>
+// Sample user data
+const usersData = [
+    {name: "John Doe", email: "john@example.com", role: "User", status: "Active", date: "2025-12-12"},
+    {name: "Jane Smith", email: "jane@example.com", role: "Admin", status: "Active", date: "2025-12-10"},
+    {name: "Ravi Kumar", email: "ravi@example.com", role: "User", status: "Inactive", date: "2025-12-09"},
+    {name: "Priya Sharma", email: "priya@example.com", role: "User", status: "Active", date: "2025-12-08"},
+    {name: "Amit Singh", email: "amit@example.com", role: "User", status: "Inactive", date: "2025-12-07"},
+    {name: "Neha Gupta", email: "neha@example.com", role: "Admin", status: "Active", date: "2025-12-06"},
+    {name: "Suresh Reddy", email: "suresh@example.com", role: "User", status: "Active", date: "2025-12-05"},
+    {name: "Anjali Mehta", email: "anjali@example.com", role: "User", status: "Inactive", date: "2025-12-04"},
+    {name: "Vikram Patel", email: "vikram@example.com", role: "User", status: "Active", date: "2025-12-03"},
+    {name: "Kavita Desai", email: "kavita@example.com", role: "User", status: "Active", date: "2025-12-02"}
+];
+
+// Pagination
+let currentPage = 1;
+const rowsPerPage = 5;
+
+function renderTable(page = 1) {
+    const tableBody = document.getElementById("usersTableBody");
+    tableBody.innerHTML = "";
+    currentPage = page;
+
+    const start = (page - 1) * rowsPerPage;
+    const end = start + rowsPerPage;
+    const pageData = usersData.slice(start, end);
+
+    pageData.forEach((user, index) => {
+        const tr = document.createElement("tr");
+
+        tr.innerHTML = `
+            <td>${start + index + 1}</td>
+            <td>${user.name}</td>
+            <td>${user.email}</td>
+            <td>${user.role}</td>
+            <td><span class="${user.status === "Active" ? "status-active" : "status-inactive"}">${user.status}</span></td>
+            <td>${user.date}</td>
+            <td>
+                <button class="action-btn edit-btn" onclick="editUser(${start + index})">Edit</button>
+                <button class="action-btn delete-btn" onclick="deleteUser(${start + index})">Delete</button>
+            </td>
+        `;
+        tableBody.appendChild(tr);
+    });
+
+    renderPagination();
+}
+
+function renderPagination() {
+    const paginationDiv = document.getElementById("pagination");
+    paginationDiv.innerHTML = "";
+    const totalPages = Math.ceil(usersData.length / rowsPerPage);
+
+    for (let i = 1; i <= totalPages; i++) {
+        const btn = document.createElement("button");
+        btn.innerText = i;
+        if (i === currentPage) btn.classList.add("active");
+        btn.addEventListener("click", () => renderTable(i));
+        paginationDiv.appendChild(btn);
+    }
+}
+
+function editUser(index) {
+    alert("Edit functionality for " + usersData[index].name + " coming soon!");
+}
+
+function deleteUser(index) {
+    if (confirm("Are you sure you want to delete " + usersData[index].name + "?")) {
+        usersData.splice(index, 1);
+        renderTable(currentPage);
+    }
+}
+
+function searchUsers() {
+    const query = document.getElementById("searchInput").value.toLowerCase();
+    const filteredData = usersData.filter(u => u.name.toLowerCase().includes(query) || u.email.toLowerCase().includes(query));
+    const tableBody = document.getElementById("usersTableBody");
+    tableBody.innerHTML = "";
+    filteredData.forEach((user, index) => {
+        const tr = document.createElement("tr");
+        tr.innerHTML = `
+            <td>${index + 1}</td>
+            <td>${user.name}</td>
+            <td>${user.email}</td>
+            <td>${user.role}</td>
+            <td><span class="${user.status === "Active" ? "status-active" : "status-inactive"}">${user.status}</span></td>
+            <td>${user.date}</td>
+            <td>
+                <button class="action-btn edit-btn" onclick="editUser(${index})">Edit</button>
+                <button class="action-btn delete-btn" onclick="deleteUser(${index})">Delete</button>
+            </td>
+        `;
+        tableBody.appendChild(tr);
+    });
+    renderPagination();
+}
+
+window.onload = function() {
+    renderTable();
+};
+</script>
+
+</head>
+<body>
+<div class="page-overlay">
+
+<!-- Navbar -->
+<div class="navbar">
+    <div class="logo">AEROSENSE</div>
+    <div>
+        <a href="admin_home.html">Dashboard</a>
+        <a href="users.html">Users</a>
+        <a href="reports.html">Reports</a>
+        <a href="settings.html">Settings</a>
+        <a href="login.html">Logout</a>
+    </div>
+</div>
+
+<div class="container">
+<h1>Users Management</h1>
+<div class="subtitle">View, Edit and Manage All Registered Users</div>
+
+<!-- Search Bar -->
+<div class="search-bar">
+    <input type="text" id="searchInput" placeholder="Search by name or email">
+    <button onclick="searchUsers()">Search</button>
+</div>
+
+<!-- Users Table -->
+<table class="users-table">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Role</th>
+            <th>Status</th>
+            <th>Registered On</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody id="usersTableBody">
+        <!-- Populated by JS -->
+    </tbody>
+</table>
+
+<!-- Pagination -->
+<div class="pagination" id="pagination"></div>
+
+</div>
+</div>
+</body>
+</html>
